@@ -812,6 +812,22 @@ export class BasePoseControlsUI {
         buttonRow.appendChild(loadFramesBtn);
         container.appendChild(buttonRow);
 
+        // Save current frame to next frame button - THIRD ROW (separate line)
+        const saveToNextRow = document.createElement('div');
+        saveToNextRow.style.cssText = 'display: flex; gap: 8px; margin-bottom: 12px;';
+        
+        const saveToNextBtn = document.createElement('button');
+        saveToNextBtn.id = 'save-frame-to-next-btn';
+        saveToNextBtn.className = 'save-frame-to-next-btn';
+        saveToNextBtn.textContent = window.i18n?.t('saveCurrentFrameToNext') || 'Save Current Frame to Next';
+        saveToNextBtn.style.cssText = 'width: 100% !important; padding: 6px 12px !important; margin: 0 !important; font-size: 12px; white-space: nowrap;';
+        saveToNextBtn.addEventListener('click', async () => {
+            await this.saveFrameToNext(model);
+        });
+        
+        saveToNextRow.appendChild(saveToNextBtn);
+        container.appendChild(saveToNextRow);
+
         // Create controls for orientation (roll, pitch, yaw)
         const orientationGroup = document.createElement('div');
         orientationGroup.className = 'base-pose-group';
@@ -1841,6 +1857,122 @@ export class BasePoseControlsUI {
             this.showNotification(message, 'success');
         } catch (error) {
             console.error('Error saving frame file:', error);
+            this.showNotification(
+                window.i18n?.t('frameSaveError') || `Error saving frame: ${error.message}`,
+                'error'
+            );
+        }
+    }
+
+    /**
+     * Save current frame to next frame (with incremented time)
+     */
+    async saveFrameToNext(model) {
+        if (!model) {
+            console.warn('No model loaded, cannot save frame');
+            this.showNotification(window.i18n?.t('noModelLoaded') || 'No model loaded', 'error');
+            return;
+        }
+
+        // Validate file name
+        if (!this.frameFileName || this.frameFileName.trim() === '') {
+            this.showNotification(window.i18n?.t('frameFileNameRequired') || 'Please enter a frame file name', 'error');
+            const frameFileNameSelect = document.getElementById('frame-file-name-select');
+            if (frameFileNameSelect) {
+                frameFileNameSelect.focus();
+            }
+            return;
+        }
+
+        // Calculate next frame time (increment by 0.1 seconds by default)
+        const timeIncrement = 0.1;
+        const nextFrameTime = this.frameTime + timeIncrement;
+
+        // Collect joint angles
+        const jointAngles = {};
+        if (model.joints) {
+            model.joints.forEach((joint, name) => {
+                if (joint.type !== 'fixed') {
+                    const currentValue = joint.currentValue !== undefined ? joint.currentValue : 0;
+                    jointAngles[name] = currentValue;
+                }
+            });
+        }
+
+        // Create frame data with next frame time
+        const frameData = {
+            frame_time: nextFrameTime,
+            joint_angles: jointAngles,
+            rpy: {
+                roll: this.basePose.roll,
+                pitch: this.basePose.pitch,
+                yaw: this.basePose.yaw
+            },
+            pos_world: {
+                x: this.basePose.x,
+                y: this.basePose.y,
+                z: this.basePose.z
+            }
+        };
+
+        // Convert to JSON
+        const jsonString = JSON.stringify(frameData, null, 2);
+
+        // Copy to clipboard using modern Clipboard API
+        try {
+            await navigator.clipboard.writeText(jsonString);
+            console.log('Frame copied to clipboard:', frameData);
+        } catch (err) {
+            console.error('Failed to copy to clipboard:', err);
+        }
+
+        // Save to file via backend API
+        const filePath = this.getFrameFilePath(model);
+        try {
+            // Ensure backend config is initialized
+            await backendConfig.init();
+            const response = await fetch(backendConfig.getApiUrl('api/save-frame-file'), {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    file: filePath,
+                    frame: frameData,
+                    frameTime: nextFrameTime
+                })
+            });
+
+            if (!response.ok) {
+                throw new Error(`Failed to save: ${response.status}`);
+            }
+
+            const result = await response.json();
+            console.log('Frame saved to next time:', result);
+
+            // Update current frame time to next frame time
+            this.frameTime = nextFrameTime;
+            const frameTimeInput = document.getElementById('frame-time-input');
+            if (frameTimeInput) {
+                frameTimeInput.value = this.frameTime.toFixed(4);
+            }
+
+            // Reload frames after saving
+            await this.loadFrameFile(model);
+
+            // Load the newly saved frame
+            if (this.framesData.length > 0) {
+                const closestIndex = this.findClosestFrameIndex(nextFrameTime);
+                if (closestIndex >= 0) {
+                    this.loadFrameByIndex(closestIndex, model, false);
+                }
+            }
+
+            // Show success notification
+            const message = window.i18n?.t('frameSavedToNext') || `Frame saved to next time (${nextFrameTime.toFixed(4)}s, ${result.count} frames total)`;
+            this.showNotification(message, 'success');
+        } catch (error) {
+            console.error('Error saving frame to next:', error);
             this.showNotification(
                 window.i18n?.t('frameSaveError') || `Error saving frame: ${error.message}`,
                 'error'
