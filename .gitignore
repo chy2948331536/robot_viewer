@@ -1,30 +1,22 @@
-# Dependencies
-node_modules/
+# ============================================
+# FRAMES-DATA BRANCH CONFIGURATION
+# This branch only tracks frames/ directory
+# ============================================
 
-# Build output
-dist/
-build/
+# Ignore everything by default
+*
 
-# Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# But track the frames directory and all its contents
+!frames/
+!frames/**
 
-# Editor directories and files
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
+# Track .gitignore itself
+!.gitignore
 
-# OS files
-.DS_Store
-Thumbs.db
+# Track .git directory (needed for git to work)
+!.git/
 
-# Environment variables
-.env
-.env.local
-
-# Cache
-.cache/
+# Optional: if you want to track README or docs in this branch, uncomment:
+# !README.md
+# !docs/
 

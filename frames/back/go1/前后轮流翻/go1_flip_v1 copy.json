@@ -1,0 +1,5242 @@
+{
+  "frames": [
+    {
+      "frame_time": 1.5,
+      "joint_angles": {
+        "FL_calf_joint": -1.5,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.8,
+        "FR_calf_joint": -1.5,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.8,
+        "RL_calf_joint": -1.5,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1,
+        "RR_calf_joint": -1.5,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 0,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": 0,
+        "y": 0,
+        "z": 0.003400000000000014
+      }
+    },
+    {
+      "frame_time": 1.54,
+      "joint_angles": {
+        "FL_calf_joint": -1.5,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.8,
+        "FR_calf_joint": -1.5,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.8,
+        "RL_calf_joint": -1.5,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1,
+        "RR_calf_joint": -1.5,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 0,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": 0,
+        "y": 0,
+        "z": 0.003400000000000014
+      }
+    },
+    {
+      "frame_time": 1.58,
+      "joint_angles": {
+        "FL_calf_joint": -1.5,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.8,
+        "FR_calf_joint": -1.5,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.8,
+        "RL_calf_joint": -1.5,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1,
+        "RR_calf_joint": -1.5,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 0,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": 0,
+        "y": 0,
+        "z": 0.003400000000000014
+      }
+    },
+    {
+      "frame_time": 1.61,
+      "joint_angles": {
+        "FL_calf_joint": -1.5,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.8,
+        "FR_calf_joint": -1.5,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.8,
+        "RL_calf_joint": -1.7370334288030973,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.7871215789459515,
+        "RR_calf_joint": -1.6705744408200816,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.7488148847653524
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 0,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "frame_time": 1.64,
+      "joint_angles": {
+        "FL_calf_joint": -1.3126722192836613,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.6546563132260736,
+        "FR_calf_joint": -1.3086525430532425,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.6546563132260736,
+        "RL_calf_joint": -1.7630193038447877,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.23,
+        "RR_calf_joint": -1.7630193038447877,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.23
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -0.132592653589793,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.07,
+        "y": 0,
+        "z": 0.0008000000000000229
+      }
+    },
+    {
+      "frame_time": 1.68,
+      "joint_angles": {
+        "FL_calf_joint": -1.2139668373711152,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.5851965681441464,
+        "FR_calf_joint": -1.21,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.59,
+        "RL_calf_joint": -1.445134552552137,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.23,
+        "RR_calf_joint": -1.3049907079410343,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.23
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -0.16,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.091,
+        "y": 0,
+        "z": 0.0008000000000000229
+      }
+    },
+    {
+      "frame_time": 1.72,
+      "joint_angles": {
+        "FL_calf_joint": -0.9218137465914543,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.6327896102413414,
+        "FR_calf_joint": -0.9672345081285622,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.6309523587508671,
+        "RL_calf_joint": -1.2802198772011393,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.23,
+        "RR_calf_joint": -1.267173881187316,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.23
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -0.416592653589793,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.15,
+        "y": 0,
+        "z": 0.0008000000000000229
+      }
+    },
+    {
+      "frame_time": 1.74,
+      "joint_angles": {
+        "FL_calf_joint": -0.9218137465914543,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.8005270050831395,
+        "FR_calf_joint": -0.9672345081285622,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.8432566206041406,
+        "RL_calf_joint": -1.1459375024242624,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.530624058421061,
+        "RR_calf_joint": -1.1549798699533886,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.5775599565593157
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -0.558592653589793,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.12,
+        "y": 0,
+        "z": 0.08890000000000003
+      }
+    },
+    {
+      "frame_time": 1.82,
+      "joint_angles": {
+        "FL_calf_joint": -0.9218137465914543,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 1.1961042021837225,
+        "FR_calf_joint": -0.9672345081285622,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 1.2166909801905395,
+        "RL_calf_joint": -1.3813530664856397,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.54740878333592,
+        "RR_calf_joint": -1.3592066031154322,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.5781192645750535
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -1.19659265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.1,
+        "y": 0,
+        "z": 0.17019999999999996
+      }
+    },
+    {
+      "frame_time": 1.85,
+      "joint_angles": {
+        "FL_calf_joint": -0.9218137465914543,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 1.0409316000090376,
+        "FR_calf_joint": -0.9672345081285622,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 1.0945149819177686,
+        "RL_calf_joint": -1.3813530664856397,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.9057218177390172,
+        "RR_calf_joint": -1.3592066031154322,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.867905847345004
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -1.40959265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.1,
+        "y": 0,
+        "z": 0.1972
+      }
+    },
+    {
+      "frame_time": 1.89,
+      "joint_angles": {
+        "FL_calf_joint": -0.9218137465914543,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.5590165284499393,
+        "FR_calf_joint": -0.9672345081285622,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.5830482433836605,
+        "RL_calf_joint": -1.3813530664856397,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.0351664453359577,
+        "RR_calf_joint": -1.3592066031154322,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.023055036473323
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -1.55159265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.12,
+        "y": 0,
+        "z": 0.1972
+      }
+    },
+    {
+      "frame_time": 1.92,
+      "joint_angles": {
+        "FL_calf_joint": -1.5911870784543714,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.196410528643287,
+        "FR_calf_joint": -1.5518728067904104,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.2409850102451732,
+        "RL_calf_joint": -1.1403938528317967,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.215576804264749,
+        "RR_calf_joint": -1.171527803905607,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.230518248846735
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -1.69359265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.1,
+        "y": 0,
+        "z": 0.23110000000000003
+      }
+    },
+    {
+      "frame_time": 1.95,
+      "joint_angles": {
+        "FL_calf_joint": -0.837758,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.13742950431248896,
+        "FR_calf_joint": -0.9666218300399378,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.08325234573557994,
+        "RL_calf_joint": -0.8551804626999316,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.380165162797119,
+        "RR_calf_joint": -0.8497706960278948,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.385175234686015
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -2.04759265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.15,
+        "y": 0,
+        "z": 0.28529999999999994
+      }
+    },
+    {
+      "frame_time": 1.98,
+      "joint_angles": {
+        "FL_calf_joint": -0.837758,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.13742950431248896,
+        "FR_calf_joint": -0.9666218300399378,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.08325234573557994,
+        "RL_calf_joint": -0.8551804626999316,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.8114056348701753,
+        "RR_calf_joint": -0.8497706960278948,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.801745733135413
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -2.47359265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.19,
+        "y": 0,
+        "z": 0.30927999999999894
+      }
+    },
+    {
+      "frame_time": 2,
+      "joint_angles": {
+        "FL_calf_joint": -0.837758,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.13742950431248896,
+        "FR_calf_joint": -0.9666218300399378,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.08325234573557994,
+        "RL_calf_joint": -0.8551804626999316,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.8114056348701753,
+        "RR_calf_joint": -0.8497706960278948,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.801745733135413
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -2.89859265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.23,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 2.03,
+      "joint_angles": {
+        "FL_calf_joint": -0.837758,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.13742950431248896,
+        "FR_calf_joint": -0.9666218300399378,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.08325234573557994,
+        "RL_calf_joint": -0.8551804626999316,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.8114056348701753,
+        "RR_calf_joint": -0.8497706960278948,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.801745733135413
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -3.11159265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.26,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 2.07,
+      "joint_angles": {
+        "FL_calf_joint": -0.9571317891057186,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.24209105911845855,
+        "FR_calf_joint": -0.96,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.24,
+        "RL_calf_joint": -1.377322724183299,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.320188957207109,
+        "RR_calf_joint": -1.3439939717365688,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.335868656784026
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -3.29003460797562,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.295,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 2.1,
+      "joint_angles": {
+        "FL_calf_joint": -1.2685001481106817,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.3470837947247589,
+        "FR_calf_joint": -1.27,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.35,
+        "RL_calf_joint": -1.5806880042645666,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.8839226135284783,
+        "RR_calf_joint": -1.586559166434019,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.9103723278832487
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -3.4134137198187,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.305,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 2.13,
+      "joint_angles": {
+        "FL_calf_joint": -1.2943197488489115,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.44749065922629344,
+        "FR_calf_joint": -1.29,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.45,
+        "RL_calf_joint": -1.6275431588200793,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.4542426091855563,
+        "RR_calf_joint": -1.6248964664498178,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.5185319018483228
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -3.6270627738716,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.315,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 2.16,
+      "joint_angles": {
+        "FL_calf_joint": -1.6127619648127087,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.6333086215418287,
+        "FR_calf_joint": -1.61,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.63,
+        "RL_calf_joint": -1.6275431588200793,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.1891155650339014,
+        "RR_calf_joint": -1.6248964664498178,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.245182384254689
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -3.82,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.32,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 2.2,
+      "joint_angles": {
+        "FL_calf_joint": -1.6127619648127087,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.5924706791744884,
+        "FR_calf_joint": -1.61,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.63,
+        "RL_calf_joint": -1.8995855660705199,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.1891155650339014,
+        "RR_calf_joint": -1.8663017169257026,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.245182384254689
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -4.1,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.325,
+        "y": 0,
+        "z": 0.278679999999999
+      }
+    },
+    {
+      "frame_time": 2.23,
+      "joint_angles": {
+        "FL_calf_joint": -1.7654397194738891,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.3245884785633691,
+        "FR_calf_joint": -1.77,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.32,
+        "RL_calf_joint": -1.8995855660705199,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.1891155650339014,
+        "RR_calf_joint": -1.8663017169257026,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.245182384254689
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -4.3,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.33,
+        "y": 0,
+        "z": 0.278679999999999
+      }
+    },
+    {
+      "frame_time": 2.27,
+      "joint_angles": {
+        "FL_calf_joint": -1.804768775516768,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.5254342756228506,
+        "FR_calf_joint": -1.6998336506975658,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.5735425732091287,
+        "RL_calf_joint": -1.8995855660705199,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.1891155650339014,
+        "RR_calf_joint": -1.8663017169257026,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.245182384254689
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -4.5,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.33,
+        "y": 0,
+        "z": 0.23311999999999894
+      }
+    },
+    {
+      "frame_time": 2.3,
+      "joint_angles": {
+        "FL_calf_joint": -1.6881667856112847,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.663225,
+        "FR_calf_joint": -1.69,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.66,
+        "RL_calf_joint": -1.8995855660705199,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.1891155650339014,
+        "RR_calf_joint": -1.8663017169257026,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.245182384254689
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -4.7,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.33,
+        "y": 0,
+        "z": 0.19435999999999903
+      }
+    },
+    {
+      "frame_time": 2.34,
+      "joint_angles": {
+        "FL_calf_joint": -1.8256292472360627,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.2425568577450589,
+        "FR_calf_joint": -1.799957770049711,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.28914508968013697,
+        "RL_calf_joint": -1.5892924857868254,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.9741031729468438,
+        "RR_calf_joint": -1.6691351298650379,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.1065610389682317
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -4.9,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.34,
+        "y": 0,
+        "z": 0.1289
+      }
+    },
+    {
+      "frame_time": 2.37,
+      "joint_angles": {
+        "FL_calf_joint": -1.96,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.12,
+        "FR_calf_joint": -1.9624079565429025,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.11758730205788705,
+        "RL_calf_joint": -1.46,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.63,
+        "RR_calf_joint": -1.4577786651319844,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.6304735585788698
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 1.15240734641021,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.4207,
+        "y": 0,
+        "z": 0.097
+      }
+    },
+    {
+      "frame_time": 2.4,
+      "joint_angles": {
+        "FL_calf_joint": -2.08,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.13,
+        "FR_calf_joint": -2.0765271520102595,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.13416207984838602,
+        "RL_calf_joint": -1.46,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.63,
+        "RR_calf_joint": -1.4577786651319844,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.6304735585788698
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 0.904407346410207,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.4658,
+        "y": 0,
+        "z": 0.0505
+      }
+    },
+    {
+      "frame_time": 2.43,
+      "joint_angles": {
+        "FL_calf_joint": -2.1,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.85,
+        "FR_calf_joint": -2.1009990009913566,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.8461686142453065,
+        "RL_calf_joint": -1.3435934232421267,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.4806313774759584,
+        "RR_calf_joint": -1.2910547225447264,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.504830377912014
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 0.411407346410207,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.4786,
+        "y": 0,
+        "z": -0.0283
+      }
+    },
+    {
+      "frame_time": 2.47,
+      "joint_angles": {
+        "FL_calf_joint": -1.95,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.85,
+        "FR_calf_joint": -1.952089381834638,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.8461686142453065,
+        "RL_calf_joint": -1.41,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.51,
+        "RR_calf_joint": -1.4102074380641472,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.504830377912014
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 0.246407346410207,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.5067,
+        "y": 0,
+        "z": -0.0283
+      }
+    },
+    {
+      "frame_time": 2.5,
+      "joint_angles": {
+        "FL_calf_joint": -1.95,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.85,
+        "FR_calf_joint": -1.952089381834638,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.8461686142453065,
+        "RL_calf_joint": -1.6206722155022857,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.51,
+        "RR_calf_joint": -1.587731105386133,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.504830377912014
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 0.013407346410207,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.6016,
+        "y": 0,
+        "z": -0.0283
+      }
+    },
+    {
+      "frame_time": 2.54,
+      "joint_angles": {
+        "FL_calf_joint": -1.95,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.85,
+        "FR_calf_joint": -1.8474616007001188,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.8250683598160965,
+        "RL_calf_joint": -1.6627239677326775,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.49295872609815544,
+        "RR_calf_joint": -1.648113718353649,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.504830377912014
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -0.176592653589793,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.6651,
+        "y": 0,
+        "z": -0.0283
+      }
+    },
+    {
+      "frame_time": 2.57,
+      "joint_angles": {
+        "FL_calf_joint": -0.9218137465914543,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.8005270050831395,
+        "FR_calf_joint": -0.9672345081285622,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.8432566206041406,
+        "RL_calf_joint": -1.1459375024242624,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.530624058421061,
+        "RR_calf_joint": -1.1549798699533886,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.5775599565593157
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -0.558592653589793,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.7413,
+        "y": 0,
+        "z": 0.08890000000000003
+      }
+    },
+    {
+      "frame_time": 2.57,
+      "joint_angles": {
+        "FL_calf_joint": -0.9218137465914543,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.8005270050831395,
+        "FR_calf_joint": -0.9672345081285622,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.8432566206041406,
+        "RL_calf_joint": -1.1459375024242624,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.530624058421061,
+        "RR_calf_joint": -1.1549798699533886,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.5775599565593157
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -0.558592653589793,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.7413,
+        "y": 0,
+        "z": 0.08890000000000003
+      }
+    },
+    {
+      "frame_time": 2.65,
+      "joint_angles": {
+        "FL_calf_joint": -0.9218137465914543,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 1.1961042021837225,
+        "FR_calf_joint": -0.9672345081285622,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 1.2166909801905395,
+        "RL_calf_joint": -1.3813530664856397,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.54740878333592,
+        "RR_calf_joint": -1.3592066031154322,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.5781192645750535
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -1.19659265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.7212999999999999,
+        "y": 0,
+        "z": 0.17019999999999996
+      }
+    },
+    {
+      "frame_time": 2.68,
+      "joint_angles": {
+        "FL_calf_joint": -0.9218137465914543,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 1.0409316000090376,
+        "FR_calf_joint": -0.9672345081285622,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 1.0945149819177686,
+        "RL_calf_joint": -1.3813530664856397,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.9057218177390172,
+        "RR_calf_joint": -1.3592066031154322,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.867905847345004
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -1.40959265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.7212999999999999,
+        "y": 0,
+        "z": 0.1972
+      }
+    },
+    {
+      "frame_time": 2.7199999999999998,
+      "joint_angles": {
+        "FL_calf_joint": -0.9218137465914543,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.5590165284499393,
+        "FR_calf_joint": -0.9672345081285622,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.5830482433836605,
+        "RL_calf_joint": -1.3813530664856397,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.0351664453359577,
+        "RR_calf_joint": -1.3592066031154322,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.023055036473323
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -1.55159265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.7413,
+        "y": 0,
+        "z": 0.1972
+      }
+    },
+    {
+      "frame_time": 2.75,
+      "joint_angles": {
+        "FL_calf_joint": -1.5911870784543714,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.196410528643287,
+        "FR_calf_joint": -1.5518728067904104,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.2409850102451732,
+        "RL_calf_joint": -1.1403938528317967,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.215576804264749,
+        "RR_calf_joint": -1.171527803905607,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.230518248846735
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -1.69359265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.7212999999999999,
+        "y": 0,
+        "z": 0.23110000000000003
+      }
+    },
+    {
+      "frame_time": 2.78,
+      "joint_angles": {
+        "FL_calf_joint": -0.837758,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.13742950431248896,
+        "FR_calf_joint": -0.9666218300399378,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.08325234573557994,
+        "RL_calf_joint": -0.8551804626999316,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.380165162797119,
+        "RR_calf_joint": -0.8497706960278948,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.385175234686015
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -2.04759265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.7713,
+        "y": 0,
+        "z": 0.28529999999999994
+      }
+    },
+    {
+      "frame_time": 2.81,
+      "joint_angles": {
+        "FL_calf_joint": -0.837758,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.13742950431248896,
+        "FR_calf_joint": -0.9666218300399378,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.08325234573557994,
+        "RL_calf_joint": -0.8551804626999316,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.8114056348701753,
+        "RR_calf_joint": -0.8497706960278948,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.801745733135413
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -2.47359265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.8112999999999999,
+        "y": 0,
+        "z": 0.30927999999999894
+      }
+    },
+    {
+      "frame_time": 2.83,
+      "joint_angles": {
+        "FL_calf_joint": -0.837758,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.13742950431248896,
+        "FR_calf_joint": -0.9666218300399378,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.08325234573557994,
+        "RL_calf_joint": -0.8551804626999316,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.8114056348701753,
+        "RR_calf_joint": -0.8497706960278948,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.801745733135413
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -2.89859265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.8513,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 2.86,
+      "joint_angles": {
+        "FL_calf_joint": -0.837758,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.13742950431248896,
+        "FR_calf_joint": -0.9666218300399378,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.08325234573557994,
+        "RL_calf_joint": -0.8551804626999316,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.8114056348701753,
+        "RR_calf_joint": -0.8497706960278948,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.801745733135413
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -3.11159265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.8813,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 2.9,
+      "joint_angles": {
+        "FL_calf_joint": -0.9571317891057186,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.24209105911845855,
+        "FR_calf_joint": -0.96,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.24,
+        "RL_calf_joint": -1.377322724183299,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.320188957207109,
+        "RR_calf_joint": -1.3439939717365688,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.335868656784026
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -3.29003460797562,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.9162999999999999,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 2.93,
+      "joint_angles": {
+        "FL_calf_joint": -1.2685001481106817,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.3470837947247589,
+        "FR_calf_joint": -1.27,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.35,
+        "RL_calf_joint": -1.5806880042645666,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.8839226135284783,
+        "RR_calf_joint": -1.586559166434019,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.9103723278832487
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -3.4134137198187,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.9262999999999999,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 2.96,
+      "joint_angles": {
+        "FL_calf_joint": -1.2943197488489115,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.44749065922629344,
+        "FR_calf_joint": -1.29,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.45,
+        "RL_calf_joint": -1.6275431588200793,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.4542426091855563,
+        "RR_calf_joint": -1.6248964664498178,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.5185319018483228
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -3.6270627738716,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.9362999999999999,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 2.99,
+      "joint_angles": {
+        "FL_calf_joint": -1.6127619648127087,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.6333086215418287,
+        "FR_calf_joint": -1.61,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.63,
+        "RL_calf_joint": -1.6275431588200793,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.1891155650339014,
+        "RR_calf_joint": -1.6248964664498178,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.245182384254689
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -3.82,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.9413,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 3.0300000000000002,
+      "joint_angles": {
+        "FL_calf_joint": -1.6127619648127087,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.5924706791744884,
+        "FR_calf_joint": -1.61,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.63,
+        "RL_calf_joint": -1.8995855660705199,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.1891155650339014,
+        "RR_calf_joint": -1.8663017169257026,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.245182384254689
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -4.1,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.9462999999999999,
+        "y": 0,
+        "z": 0.278679999999999
+      }
+    },
+    {
+      "frame_time": 3.06,
+      "joint_angles": {
+        "FL_calf_joint": -1.7654397194738891,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.3245884785633691,
+        "FR_calf_joint": -1.77,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.32,
+        "RL_calf_joint": -1.8995855660705199,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.1891155650339014,
+        "RR_calf_joint": -1.8663017169257026,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.245182384254689
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -4.3,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.9513,
+        "y": 0,
+        "z": 0.278679999999999
+      }
+    },
+    {
+      "frame_time": 3.1,
+      "joint_angles": {
+        "FL_calf_joint": -1.804768775516768,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.5254342756228506,
+        "FR_calf_joint": -1.6998336506975658,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.5735425732091287,
+        "RL_calf_joint": -1.8995855660705199,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.1891155650339014,
+        "RR_calf_joint": -1.8663017169257026,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.245182384254689
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -4.5,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.9513,
+        "y": 0,
+        "z": 0.23311999999999894
+      }
+    },
+    {
+      "frame_time": 3.13,
+      "joint_angles": {
+        "FL_calf_joint": -1.6881667856112847,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.663225,
+        "FR_calf_joint": -1.69,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.66,
+        "RL_calf_joint": -1.8995855660705199,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.1891155650339014,
+        "RR_calf_joint": -1.8663017169257026,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.245182384254689
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -4.7,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.9513,
+        "y": 0,
+        "z": 0.19435999999999903
+      }
+    },
+    {
+      "frame_time": 3.17,
+      "joint_angles": {
+        "FL_calf_joint": -1.8256292472360627,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.2425568577450589,
+        "FR_calf_joint": -1.799957770049711,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.28914508968013697,
+        "RL_calf_joint": -1.5892924857868254,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.9741031729468438,
+        "RR_calf_joint": -1.6691351298650379,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.1065610389682317
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -4.9,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.9613,
+        "y": 0,
+        "z": 0.1289
+      }
+    },
+    {
+      "frame_time": 3.2,
+      "joint_angles": {
+        "FL_calf_joint": -1.96,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.12,
+        "FR_calf_joint": -1.9624079565429025,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.11758730205788705,
+        "RL_calf_joint": -1.46,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.63,
+        "RR_calf_joint": -1.4577786651319844,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.6304735585788698
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 1.15240734641021,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.042,
+        "y": 0,
+        "z": 0.097
+      }
+    },
+    {
+      "frame_time": 3.23,
+      "joint_angles": {
+        "FL_calf_joint": -2.08,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.13,
+        "FR_calf_joint": -2.0765271520102595,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.13416207984838602,
+        "RL_calf_joint": -1.46,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.63,
+        "RR_calf_joint": -1.4577786651319844,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.6304735585788698
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 0.904407346410207,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.0871,
+        "y": 0,
+        "z": 0.0505
+      }
+    },
+    {
+      "frame_time": 3.2600000000000002,
+      "joint_angles": {
+        "FL_calf_joint": -2.1,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.85,
+        "FR_calf_joint": -2.1009990009913566,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.8461686142453065,
+        "RL_calf_joint": -1.3435934232421267,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.4806313774759584,
+        "RR_calf_joint": -1.2910547225447264,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.504830377912014
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 0.411407346410207,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.0998999999999999,
+        "y": 0,
+        "z": -0.0283
+      }
+    },
+    {
+      "frame_time": 3.3000000000000003,
+      "joint_angles": {
+        "FL_calf_joint": -1.95,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.85,
+        "FR_calf_joint": -1.952089381834638,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.8461686142453065,
+        "RL_calf_joint": -1.41,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.51,
+        "RR_calf_joint": -1.4102074380641472,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.504830377912014
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 0.246407346410207,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.1280000000000001,
+        "y": 0,
+        "z": -0.0283
+      }
+    },
+    {
+      "frame_time": 3.33,
+      "joint_angles": {
+        "FL_calf_joint": -1.95,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.85,
+        "FR_calf_joint": -1.952089381834638,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.8461686142453065,
+        "RL_calf_joint": -1.6206722155022857,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.51,
+        "RR_calf_joint": -1.587731105386133,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.504830377912014
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 0.013407346410207,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.2229,
+        "y": 0,
+        "z": -0.0283
+      }
+    },
+    {
+      "frame_time": 3.37,
+      "joint_angles": {
+        "FL_calf_joint": -1.95,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.85,
+        "FR_calf_joint": -1.8474616007001188,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.8250683598160965,
+        "RL_calf_joint": -1.6627239677326775,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.49295872609815544,
+        "RR_calf_joint": -1.648113718353649,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.504830377912014
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -0.176592653589793,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.2864,
+        "y": 0,
+        "z": -0.0283
+      }
+    },
+    {
+      "frame_time": 3.4,
+      "joint_angles": {
+        "FL_calf_joint": -0.9218137465914543,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.8005270050831395,
+        "FR_calf_joint": -0.9672345081285622,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.8432566206041406,
+        "RL_calf_joint": -1.1459375024242624,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.530624058421061,
+        "RR_calf_joint": -1.1549798699533886,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.5775599565593157
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -0.558592653589793,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.3626,
+        "y": 0,
+        "z": 0.08890000000000003
+      }
+    },
+    {
+      "frame_time": 3.4,
+      "joint_angles": {
+        "FL_calf_joint": -0.9218137465914543,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.8005270050831395,
+        "FR_calf_joint": -0.9672345081285622,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.8432566206041406,
+        "RL_calf_joint": -1.1459375024242624,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.530624058421061,
+        "RR_calf_joint": -1.1549798699533886,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.5775599565593157
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -0.558592653589793,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.3626,
+        "y": 0,
+        "z": 0.08890000000000003
+      }
+    },
+    {
+      "frame_time": 3.48,
+      "joint_angles": {
+        "FL_calf_joint": -0.9218137465914543,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 1.1961042021837225,
+        "FR_calf_joint": -0.9672345081285622,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 1.2166909801905395,
+        "RL_calf_joint": -1.3813530664856397,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.54740878333592,
+        "RR_calf_joint": -1.3592066031154322,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.5781192645750535
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -1.19659265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.3426,
+        "y": 0,
+        "z": 0.17019999999999996
+      }
+    },
+    {
+      "frame_time": 3.5100000000000002,
+      "joint_angles": {
+        "FL_calf_joint": -0.9218137465914543,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 1.0409316000090376,
+        "FR_calf_joint": -0.9672345081285622,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 1.0945149819177686,
+        "RL_calf_joint": -1.3813530664856397,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.9057218177390172,
+        "RR_calf_joint": -1.3592066031154322,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.867905847345004
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -1.40959265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.3426,
+        "y": 0,
+        "z": 0.1972
+      }
+    },
+    {
+      "frame_time": 3.55,
+      "joint_angles": {
+        "FL_calf_joint": -0.9218137465914543,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.5590165284499393,
+        "FR_calf_joint": -0.9672345081285622,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.5830482433836605,
+        "RL_calf_joint": -1.3813530664856397,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.0351664453359577,
+        "RR_calf_joint": -1.3592066031154322,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.023055036473323
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -1.55159265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.3626,
+        "y": 0,
+        "z": 0.1972
+      }
+    },
+    {
+      "frame_time": 3.58,
+      "joint_angles": {
+        "FL_calf_joint": -1.5911870784543714,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.196410528643287,
+        "FR_calf_joint": -1.5518728067904104,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.2409850102451732,
+        "RL_calf_joint": -1.1403938528317967,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.215576804264749,
+        "RR_calf_joint": -1.171527803905607,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.230518248846735
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -1.69359265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.3426,
+        "y": 0,
+        "z": 0.23110000000000003
+      }
+    },
+    {
+      "frame_time": 3.61,
+      "joint_angles": {
+        "FL_calf_joint": -0.837758,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.13742950431248896,
+        "FR_calf_joint": -0.9666218300399378,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.08325234573557994,
+        "RL_calf_joint": -0.8551804626999316,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.380165162797119,
+        "RR_calf_joint": -0.8497706960278948,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.385175234686015
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -2.04759265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.3925999999999998,
+        "y": 0,
+        "z": 0.28529999999999994
+      }
+    },
+    {
+      "frame_time": 3.64,
+      "joint_angles": {
+        "FL_calf_joint": -0.837758,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.13742950431248896,
+        "FR_calf_joint": -0.9666218300399378,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.08325234573557994,
+        "RL_calf_joint": -0.8551804626999316,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.8114056348701753,
+        "RR_calf_joint": -0.8497706960278948,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.801745733135413
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -2.47359265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.4325999999999999,
+        "y": 0,
+        "z": 0.30927999999999894
+      }
+    },
+    {
+      "frame_time": 3.66,
+      "joint_angles": {
+        "FL_calf_joint": -0.837758,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.13742950431248896,
+        "FR_calf_joint": -0.9666218300399378,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.08325234573557994,
+        "RL_calf_joint": -0.8551804626999316,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.8114056348701753,
+        "RR_calf_joint": -0.8497706960278948,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.801745733135413
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -2.89859265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.4726,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 3.69,
+      "joint_angles": {
+        "FL_calf_joint": -0.837758,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.13742950431248896,
+        "FR_calf_joint": -0.9666218300399378,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.08325234573557994,
+        "RL_calf_joint": -0.8551804626999316,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.8114056348701753,
+        "RR_calf_joint": -0.8497706960278948,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.801745733135413
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -3.11159265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.5026,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 3.73,
+      "joint_angles": {
+        "FL_calf_joint": -0.9571317891057186,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.24209105911845855,
+        "FR_calf_joint": -0.96,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.24,
+        "RL_calf_joint": -1.377322724183299,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.320188957207109,
+        "RR_calf_joint": -1.3439939717365688,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.335868656784026
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -3.29003460797562,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.5375999999999999,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 3.7600000000000002,
+      "joint_angles": {
+        "FL_calf_joint": -1.2685001481106817,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.3470837947247589,
+        "FR_calf_joint": -1.27,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.35,
+        "RL_calf_joint": -1.5806880042645666,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.8839226135284783,
+        "RR_calf_joint": -1.586559166434019,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.9103723278832487
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -3.4134137198187,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.5475999999999999,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 3.79,
+      "joint_angles": {
+        "FL_calf_joint": -1.2943197488489115,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.44749065922629344,
+        "FR_calf_joint": -1.29,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.45,
+        "RL_calf_joint": -1.6275431588200793,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.4542426091855563,
+        "RR_calf_joint": -1.6248964664498178,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.5185319018483228
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -3.6270627738716,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.5575999999999999,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 3.8200000000000003,
+      "joint_angles": {
+        "FL_calf_joint": -1.6127619648127087,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.6333086215418287,
+        "FR_calf_joint": -1.61,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.63,
+        "RL_calf_joint": -1.6275431588200793,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.1891155650339014,
+        "RR_calf_joint": -1.6248964664498178,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.245182384254689
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -3.82,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.5626,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 3.8600000000000003,
+      "joint_angles": {
+        "FL_calf_joint": -1.6127619648127087,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.5924706791744884,
+        "FR_calf_joint": -1.61,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.63,
+        "RL_calf_joint": -1.8995855660705199,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.5840666479497272,
+        "RR_calf_joint": -1.8663017169257026,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.5743410363945698
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -4.1,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.5675999999999999,
+        "y": 0,
+        "z": 0.278679999999999
+      }
+    },
+    {
+      "frame_time": 3.89,
+      "joint_angles": {
+        "FL_calf_joint": -1.7654397194738891,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.5347798894159227,
+        "FR_calf_joint": -1.77,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.5540103085056867,
+        "RL_calf_joint": -1.8995855660705199,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.7871804789248793,
+        "RR_calf_joint": -1.8663017169257026,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.7971977783915212
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -4.3,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.5726,
+        "y": 0,
+        "z": 0.2342
+      }
+    },
+    {
+      "frame_time": 3.93,
+      "joint_angles": {
+        "FL_calf_joint": -1.804768775516768,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.6075448825813367,
+        "FR_calf_joint": -1.6998336506975658,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.6380304364542225,
+        "RL_calf_joint": -1.8995855660705199,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.9434625809485881,
+        "RR_calf_joint": -1.8106680391454832,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.887888190106812
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 1.89040734641021,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.5726,
+        "y": 0,
+        "z": 0.1694
+      }
+    },
+    {
+      "frame_time": 3.96,
+      "joint_angles": {
+        "FL_calf_joint": -1.804768775516768,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.6075448825813367,
+        "FR_calf_joint": -1.6998336506975658,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.6380304364542225,
+        "RL_calf_joint": -1.8995855660705199,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.9434625809485881,
+        "RR_calf_joint": -1.8106680391454832,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.887888190106812
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -4.5,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.5726,
+        "y": 0,
+        "z": 0.1399
+      }
+    },
+    {
+      "frame_time": 4,
+      "joint_angles": {
+        "FL_calf_joint": -1.804768775516768,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.6075448825813367,
+        "FR_calf_joint": -1.6998336506975658,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.6380304364542225,
+        "RL_calf_joint": -1.8995855660705199,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.9434625809485881,
+        "RR_calf_joint": -1.8106680391454832,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.887888190106812
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -4.5,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.5726,
+        "y": 0,
+        "z": 0.1399
+      }
+    },
+    {
+      "frame_time": 4.03,
+      "joint_angles": {
+        "FL_calf_joint": -1.666491066959027,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.578880743047634,
+        "FR_calf_joint": -1.67,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.58,
+        "RL_calf_joint": -1.3465120139360904,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.7628291857001441,
+        "RR_calf_joint": -1.35,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.76
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 1.98040734641021,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.4577,
+        "y": 0,
+        "z": 0.0983
+      }
+    },
+    {
+      "frame_time": 4.05,
+      "joint_angles": {
+        "FL_calf_joint": -1.7446973884725947,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.617528176752291,
+        "FR_calf_joint": -1.74,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.62,
+        "RL_calf_joint": -1.3465120139360904,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.3439470849819477,
+        "RR_calf_joint": -1.35,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.34
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 2.13240734641021,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.4276,
+        "y": 0,
+        "z": 0.06469999999999998
+      }
+    },
+    {
+      "frame_time": 4.114999999999999,
+      "joint_angles": {
+        "FL_calf_joint": -1.7446973884725947,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.617528176752291,
+        "FR_calf_joint": -1.74,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.62,
+        "RL_calf_joint": -2.117047366584817,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.8333180861737164,
+        "RR_calf_joint": -2.12,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.83
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 2.51040734641021,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.4276,
+        "y": 0,
+        "z": 0.06469999999999998
+      }
+    },
+    {
+      "frame_time": 4.145,
+      "joint_angles": {
+        "FL_calf_joint": -1.9395680324380487,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.617528176752291,
+        "FR_calf_joint": -1.8911172464607822,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.62,
+        "RL_calf_joint": -2.5340127151482017,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.8333180861737164,
+        "RR_calf_joint": -2.5043600037576406,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.83
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 3.06540734641021,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.4276,
+        "y": 0,
+        "z": 0.06469999999999998
+      }
+    },
+    {
+      "frame_time": 4.204999999999999,
+      "joint_angles": {
+        "FL_calf_joint": -1.9395680324380487,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.617528176752291,
+        "FR_calf_joint": -1.8911172464607822,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.62,
+        "RL_calf_joint": -2.5340127151482017,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.8333180861737164,
+        "RR_calf_joint": -2.5043600037576406,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.83
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -2.71259265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.4276,
+        "y": 0,
+        "z": 0.06469999999999998
+      }
+    },
+    {
+      "frame_time": 4.254999999999999,
+      "joint_angles": {
+        "FL_calf_joint": -1.426304310542267,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.141550635996639,
+        "FR_calf_joint": -1.43,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.14,
+        "RL_calf_joint": -2.244844216390241,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.9670595,
+        "RR_calf_joint": -2.24,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.9670595
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -2.18259265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.4276,
+        "y": 0,
+        "z": 0.06469999999999998
+      }
+    },
+    {
+      "frame_time": 4.294999999999999,
+      "joint_angles": {
+        "FL_calf_joint": -1.426304310542267,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.22550574225302772,
+        "FR_calf_joint": -1.43,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.217817379195655,
+        "RL_calf_joint": -2.244844216390241,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.9670595,
+        "RR_calf_joint": -2.24,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.9670595
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -1.82959265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.3938,
+        "y": 0,
+        "z": 0.05230000000000001
+      }
+    },
+    {
+      "frame_time": 4.394999999999999,
+      "joint_angles": {
+        "FL_calf_joint": -1.1360283848984938,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.3501357948557825,
+        "FR_calf_joint": -1.14,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.35,
+        "RL_calf_joint": -2.4719425848435463,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.7900594735133604,
+        "RR_calf_joint": -2.47,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.79
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -1.40059265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.2827,
+        "y": 0,
+        "z": 0.01200000000000001
+      }
+    },
+    {
+      "frame_time": 4.449999999999999,
+      "joint_angles": {
+        "FL_calf_joint": -0.837758,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.7793962344029294,
+        "FR_calf_joint": -0.84,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.78,
+        "RL_calf_joint": -2.4719425848435463,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.7900594735133604,
+        "RR_calf_joint": -2.47,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.79
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -0.895592653589793,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.1505,
+        "y": 0,
+        "z": -0.05299999999999999
+      }
+    },
+    {
+      "frame_time": 4.489999999999999,
+      "joint_angles": {
+        "FL_calf_joint": -1.1536766890449366,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.9999209329346438,
+        "FR_calf_joint": -0.84,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.78,
+        "RL_calf_joint": -1.9014106370943806,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.4373080352937575,
+        "RR_calf_joint": -1.9,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.44
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -0.441592653589793,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.1783,
+        "y": 0,
+        "z": 0.010599999999999998
+      }
+    },
+    {
+      "frame_time": 4.534999999999999,
+      "joint_angles": {
+        "FL_calf_joint": -1.5,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.8,
+        "FR_calf_joint": -1.5,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.8,
+        "RL_calf_joint": -1.5032646074708995,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1,
+        "RR_calf_joint": -1.5,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -0.012592653589793,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.103,
+        "y": 0,
+        "z": -0.011199999999999988
+      }
+    },
+    {
+      "frame_time": 4.555,
+      "joint_angles": {
+        "FL_calf_joint": -1.7133194362947826,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 1.3062439585457863,
+        "FR_calf_joint": -1.71,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 1.31,
+        "RL_calf_joint": -1.5164241281100292,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.8358542432908488,
+        "RR_calf_joint": -1.52,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.84
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 0.209407346410207,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.1011,
+        "y": 0,
+        "z": -0.0534
+      }
+    },
+    {
+      "frame_time": 4.575,
+      "joint_angles": {
+        "FL_calf_joint": -1.8776804197434362,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 1.2469770609660547,
+        "FR_calf_joint": -1.88,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 1.25,
+        "RL_calf_joint": -1.3030901904523007,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.5086714874121706,
+        "RR_calf_joint": -1.3,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.51
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 0.361407346410207,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.1011,
+        "y": 0,
+        "z": -0.0534
+      }
+    },
+    {
+      "frame_time": 4.595,
+      "joint_angles": {
+        "FL_calf_joint": -1.7590708574550753,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 1.0937961094358277,
+        "FR_calf_joint": -1.76,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 1.09,
+        "RL_calf_joint": -0.837758,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.11731965355824521,
+        "RR_calf_joint": -0.84,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.12
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 0.552407346410207,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.0485,
+        "y": 0,
+        "z": -0.028799999999999992
+      }
+    },
+    {
+      "frame_time": 4.63,
+      "joint_angles": {
+        "FL_calf_joint": -1.8403595872236065,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 1.0180335396145894,
+        "FR_calf_joint": -1.84,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 1.02,
+        "RL_calf_joint": -1.0068414378545092,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.11731965355824521,
+        "RR_calf_joint": -1.01,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.12
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 0.668407346410207,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.0485,
+        "y": 0,
+        "z": -0.0131
+      }
+    },
+    {
+      "frame_time": 4.665,
+      "joint_angles": {
+        "FL_calf_joint": -1.8403595872236065,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.7506710614526672,
+        "FR_calf_joint": -1.84,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.75,
+        "RL_calf_joint": -1.0068414378545092,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": -0.021555662731721124,
+        "RR_calf_joint": -1.01,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": -0.02
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 0.870407346410207,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.0365,
+        "y": 0,
+        "z": 0.030100000000000016
+      }
+    },
+    {
+      "frame_time": 4.69,
+      "joint_angles": {
+        "FL_calf_joint": -2.02,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.49,
+        "FR_calf_joint": -2.0235459040295547,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.48874031545549035,
+        "RL_calf_joint": -1.0068414378545092,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": -0.021555662731721124,
+        "RR_calf_joint": -1.01,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": -0.02
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 1.09740734641021,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.0425999999999997,
+        "y": 0,
+        "z": 0.03849999999999998
+      }
+    },
+    {
+      "frame_time": 4.815,
+      "joint_angles": {
+        "FL_calf_joint": -1.9,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.18,
+        "FR_calf_joint": -1.8961615290376521,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.17935908362883143,
+        "RL_calf_joint": -0.9108842957963196,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.46457371348642146,
+        "RR_calf_joint": -0.91,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.46
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 1.52640734641021,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.9807,
+        "y": 0,
+        "z": 0.10339999999999999
+      }
+    },
+    {
+      "frame_time": 4.88,
+      "joint_angles": {
+        "FL_calf_joint": -1.666491066959027,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.578880743047634,
+        "FR_calf_joint": -1.67,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.58,
+        "RL_calf_joint": -1.3465120139360904,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.7628291857001441,
+        "RR_calf_joint": -1.35,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.76
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 1.98040734641021,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.8373999999999999,
+        "y": 0,
+        "z": 0.0983
+      }
+    },
+    {
+      "frame_time": 4.8999999999999995,
+      "joint_angles": {
+        "FL_calf_joint": -1.7446973884725947,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.617528176752291,
+        "FR_calf_joint": -1.74,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.62,
+        "RL_calf_joint": -1.3465120139360904,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.3439470849819477,
+        "RR_calf_joint": -1.35,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.34
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 2.13240734641021,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.8072999999999999,
+        "y": 0,
+        "z": 0.06469999999999998
+      }
+    },
+    {
+      "frame_time": 4.964999999999999,
+      "joint_angles": {
+        "FL_calf_joint": -1.7446973884725947,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.617528176752291,
+        "FR_calf_joint": -1.74,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.62,
+        "RL_calf_joint": -2.117047366584817,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.8333180861737164,
+        "RR_calf_joint": -2.12,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.83
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 2.51040734641021,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.8072999999999999,
+        "y": 0,
+        "z": 0.06469999999999998
+      }
+    },
+    {
+      "frame_time": 4.995,
+      "joint_angles": {
+        "FL_calf_joint": -1.9395680324380487,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.617528176752291,
+        "FR_calf_joint": -1.8911172464607822,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.62,
+        "RL_calf_joint": -2.5340127151482017,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.8333180861737164,
+        "RR_calf_joint": -2.5043600037576406,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.83
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 3.06540734641021,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.8072999999999999,
+        "y": 0,
+        "z": 0.06469999999999998
+      }
+    },
+    {
+      "frame_time": 5.054999999999999,
+      "joint_angles": {
+        "FL_calf_joint": -1.9395680324380487,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.617528176752291,
+        "FR_calf_joint": -1.8911172464607822,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.62,
+        "RL_calf_joint": -2.5340127151482017,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.8333180861737164,
+        "RR_calf_joint": -2.5043600037576406,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.83
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -2.71259265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.8072999999999999,
+        "y": 0,
+        "z": 0.06469999999999998
+      }
+    },
+    {
+      "frame_time": 5.1049999999999995,
+      "joint_angles": {
+        "FL_calf_joint": -1.426304310542267,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.141550635996639,
+        "FR_calf_joint": -1.43,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.14,
+        "RL_calf_joint": -2.244844216390241,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.9670595,
+        "RR_calf_joint": -2.24,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.9670595
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -2.18259265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.8072999999999999,
+        "y": 0,
+        "z": 0.06469999999999998
+      }
+    },
+    {
+      "frame_time": 5.144999999999999,
+      "joint_angles": {
+        "FL_calf_joint": -1.426304310542267,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.22550574225302772,
+        "FR_calf_joint": -1.43,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.217817379195655,
+        "RL_calf_joint": -2.244844216390241,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.9670595,
+        "RR_calf_joint": -2.24,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.9670595
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -1.82959265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.7735,
+        "y": 0,
+        "z": 0.05230000000000001
+      }
+    },
+    {
+      "frame_time": 5.244999999999999,
+      "joint_angles": {
+        "FL_calf_joint": -1.1360283848984938,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.3501357948557825,
+        "FR_calf_joint": -1.14,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.35,
+        "RL_calf_joint": -2.4719425848435463,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.7900594735133604,
+        "RR_calf_joint": -2.47,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.79
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -1.40059265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.6624,
+        "y": 0,
+        "z": 0.01200000000000001
+      }
+    },
+    {
+      "frame_time": 5.3,
+      "joint_angles": {
+        "FL_calf_joint": -0.837758,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.7793962344029294,
+        "FR_calf_joint": -0.84,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.78,
+        "RL_calf_joint": -2.4719425848435463,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.7900594735133604,
+        "RR_calf_joint": -2.47,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.79
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -0.895592653589793,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.5302,
+        "y": 0,
+        "z": -0.05299999999999999
+      }
+    },
+    {
+      "frame_time": 5.339999999999999,
+      "joint_angles": {
+        "FL_calf_joint": -1.1536766890449366,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.9999209329346438,
+        "FR_calf_joint": -0.84,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.78,
+        "RL_calf_joint": -1.9014106370943806,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.4373080352937575,
+        "RR_calf_joint": -1.9,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.44
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -0.441592653589793,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.5579999999999999,
+        "y": 0,
+        "z": 0.010599999999999998
+      }
+    },
+    {
+      "frame_time": 5.384999999999999,
+      "joint_angles": {
+        "FL_calf_joint": -1.5,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.8,
+        "FR_calf_joint": -1.5,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.8,
+        "RL_calf_joint": -1.5032646074708995,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1,
+        "RR_calf_joint": -1.5,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -0.012592653589793,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.4827,
+        "y": 0,
+        "z": -0.011199999999999988
+      }
+    },
+    {
+      "frame_time": 5.415,
+      "joint_angles": {
+        "FL_calf_joint": -1.7133194362947826,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 1.3062439585457863,
+        "FR_calf_joint": -1.71,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 1.31,
+        "RL_calf_joint": -1.5164241281100292,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.8358542432908488,
+        "RR_calf_joint": -1.52,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.84
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 0.209407346410207,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.48399999999999993,
+        "y": 0,
+        "z": -0.061
+      }
+    },
+    {
+      "frame_time": 5.4350000000000005,
+      "joint_angles": {
+        "FL_calf_joint": -1.8776804197434362,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 1.2469770609660547,
+        "FR_calf_joint": -1.88,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 1.25,
+        "RL_calf_joint": -1.3030901904523007,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.5086714874121706,
+        "RR_calf_joint": -1.3,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.51
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 0.361407346410207,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.48399999999999993,
+        "y": 0,
+        "z": -0.061
+      }
+    },
+    {
+      "frame_time": 5.455,
+      "joint_angles": {
+        "FL_calf_joint": -1.7590708574550753,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 1.0937961094358277,
+        "FR_calf_joint": -1.76,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 1.09,
+        "RL_calf_joint": -0.837758,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.11731965355824521,
+        "RR_calf_joint": -0.84,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.12
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 0.552407346410207,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.43139999999999995,
+        "y": 0,
+        "z": -0.03639999999999999
+      }
+    },
+    {
+      "frame_time": 5.49,
+      "joint_angles": {
+        "FL_calf_joint": -1.8403595872236065,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 1.0180335396145894,
+        "FR_calf_joint": -1.84,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 1.02,
+        "RL_calf_joint": -1.0068414378545092,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.11731965355824521,
+        "RR_calf_joint": -1.01,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.12
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 0.668407346410207,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.43139999999999995,
+        "y": 0,
+        "z": -0.020699999999999996
+      }
+    },
+    {
+      "frame_time": 5.525,
+      "joint_angles": {
+        "FL_calf_joint": -1.8403595872236065,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.7506710614526672,
+        "FR_calf_joint": -1.84,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.75,
+        "RL_calf_joint": -1.0068414378545092,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": -0.021555662731721124,
+        "RR_calf_joint": -1.01,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": -0.02
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 0.870407346410207,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.41939999999999994,
+        "y": 0,
+        "z": 0.02250000000000002
+      }
+    },
+    {
+      "frame_time": 5.550000000000001,
+      "joint_angles": {
+        "FL_calf_joint": -2.02,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.49,
+        "FR_calf_joint": -2.0235459040295547,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.48874031545549035,
+        "RL_calf_joint": -1.0068414378545092,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": -0.021555662731721124,
+        "RR_calf_joint": -1.01,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": -0.02
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 1.09740734641021,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.4254999999999998,
+        "y": 0,
+        "z": 0.030899999999999983
+      }
+    },
+    {
+      "frame_time": 5.675000000000001,
+      "joint_angles": {
+        "FL_calf_joint": -1.9,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.18,
+        "FR_calf_joint": -1.8961615290376521,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.17935908362883143,
+        "RL_calf_joint": -0.9108842957963196,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.46457371348642146,
+        "RR_calf_joint": -0.91,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.46
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 1.52640734641021,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.3636,
+        "y": 0,
+        "z": 0.0958
+      }
+    },
+    {
+      "frame_time": 5.74,
+      "joint_angles": {
+        "FL_calf_joint": -1.666491066959027,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.578880743047634,
+        "FR_calf_joint": -1.67,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.58,
+        "RL_calf_joint": -1.3465120139360904,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.7628291857001441,
+        "RR_calf_joint": -1.35,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.76
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 1.98040734641021,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.22029999999999988,
+        "y": 0,
+        "z": 0.0907
+      }
+    },
+    {
+      "frame_time": 5.76,
+      "joint_angles": {
+        "FL_calf_joint": -1.7446973884725947,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.617528176752291,
+        "FR_calf_joint": -1.74,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.62,
+        "RL_calf_joint": -1.3465120139360904,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.3439470849819477,
+        "RR_calf_joint": -1.35,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.34
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 2.13240734641021,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.19019999999999987,
+        "y": 0,
+        "z": 0.057099999999999984
+      }
+    },
+    {
+      "frame_time": 5.824999999999999,
+      "joint_angles": {
+        "FL_calf_joint": -1.7446973884725947,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.617528176752291,
+        "FR_calf_joint": -1.74,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.62,
+        "RL_calf_joint": -2.117047366584817,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.8333180861737164,
+        "RR_calf_joint": -2.12,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.83
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 2.51040734641021,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.19019999999999987,
+        "y": 0,
+        "z": 0.057099999999999984
+      }
+    },
+    {
+      "frame_time": 5.855,
+      "joint_angles": {
+        "FL_calf_joint": -1.9395680324380487,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.617528176752291,
+        "FR_calf_joint": -1.8911172464607822,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.62,
+        "RL_calf_joint": -2.5340127151482017,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.8333180861737164,
+        "RR_calf_joint": -2.5043600037576406,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.83
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 3.06540734641021,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.19019999999999987,
+        "y": 0,
+        "z": 0.057099999999999984
+      }
+    },
+    {
+      "frame_time": 5.914999999999999,
+      "joint_angles": {
+        "FL_calf_joint": -1.9395680324380487,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.617528176752291,
+        "FR_calf_joint": -1.8911172464607822,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.62,
+        "RL_calf_joint": -2.5340127151482017,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.8333180861737164,
+        "RR_calf_joint": -2.5043600037576406,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.83
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -2.71259265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.19019999999999987,
+        "y": 0,
+        "z": 0.057099999999999984
+      }
+    },
+    {
+      "frame_time": 5.965,
+      "joint_angles": {
+        "FL_calf_joint": -1.426304310542267,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.5880857636954342,
+        "FR_calf_joint": -1.43,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.6132356248988692,
+        "RL_calf_joint": -2.244844216390241,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.9670595,
+        "RR_calf_joint": -2.24,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.9670595
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -2.18259265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.19019999999999987,
+        "y": 0,
+        "z": 0.057099999999999984
+      }
+    },
+    {
+      "frame_time": 6.004999999999999,
+      "joint_angles": {
+        "FL_calf_joint": -1.7024493959895615,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.663225,
+        "FR_calf_joint": -1.760650361875332,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.663225,
+        "RL_calf_joint": -2.244844216390241,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.9670595,
+        "RR_calf_joint": -2.2372813615263354,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.9670595
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -1.91859265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.15639999999999993,
+        "y": 0,
+        "z": 0.04470000000000002
+      }
+    },
+    {
+      "frame_time": 6.035,
+      "joint_angles": {
+        "FL_calf_joint": -1.7024493959895615,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.663225,
+        "FR_calf_joint": -1.760650361875332,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.663225,
+        "RL_calf_joint": -2.244844216390241,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.9670595,
+        "RR_calf_joint": -2.2372813615263354,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.9670595
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -1.91859265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.15639999999999993,
+        "y": 0,
+        "z": 0.04470000000000002
+      }
+    },
+    {
+      "frame_time": 6.0649999999999995,
+      "joint_angles": {
+        "FL_calf_joint": -1.7024493959895615,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.5482936257466143,
+        "FR_calf_joint": -1.760650361875332,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.4819350811561879,
+        "RL_calf_joint": -1.8442899516684217,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.812669201196036,
+        "RR_calf_joint": -1.8612348969612904,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.8186095526465804
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -1.82959265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.1056,
+        "y": 0,
+        "z": 0.1332
+      }
+    },
+    {
+      "frame_time": 6.095,
+      "joint_angles": {
+        "FL_calf_joint": -1.7024493959895615,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.20254331409634793,
+        "FR_calf_joint": -1.760650361875332,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.08231210362462447,
+        "RL_calf_joint": -1.3117731136895814,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.465200206863391,
+        "RR_calf_joint": -1.2070625778964064,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.430094228277431
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -1.82959265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.13260000000000002,
+        "y": 0,
+        "z": 0.2147
+      }
+    },
+    {
+      "frame_time": 6.125,
+      "joint_angles": {
+        "FL_calf_joint": -0.837758,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.13742950431248896,
+        "FR_calf_joint": -0.9666218300399378,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.08325234573557994,
+        "RL_calf_joint": -0.8551804626999316,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.380165162797119,
+        "RR_calf_joint": -0.8497706960278948,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.385175234686015
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -2.04759265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.22030000000000002,
+        "y": 0,
+        "z": 0.28529999999999994
+      }
+    },
+    {
+      "frame_time": 6.155,
+      "joint_angles": {
+        "FL_calf_joint": -0.837758,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.13742950431248896,
+        "FR_calf_joint": -0.9666218300399378,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.08325234573557994,
+        "RL_calf_joint": -0.8551804626999316,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.8114056348701753,
+        "RR_calf_joint": -0.8497706960278948,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.801745733135413
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -2.47359265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.2603,
+        "y": 0,
+        "z": 0.30927999999999894
+      }
+    },
+    {
+      "frame_time": 6.175,
+      "joint_angles": {
+        "FL_calf_joint": -0.837758,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.13742950431248896,
+        "FR_calf_joint": -0.9666218300399378,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.08325234573557994,
+        "RL_calf_joint": -0.8551804626999316,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.8114056348701753,
+        "RR_calf_joint": -0.8497706960278948,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.801745733135413
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -2.89859265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.3003,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 6.204999999999999,
+      "joint_angles": {
+        "FL_calf_joint": -0.837758,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.13742950431248896,
+        "FR_calf_joint": -0.9666218300399378,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.08325234573557994,
+        "RL_calf_joint": -0.8551804626999316,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.8114056348701753,
+        "RR_calf_joint": -0.8497706960278948,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.801745733135413
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -3.11159265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.33030000000000004,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 6.245,
+      "joint_angles": {
+        "FL_calf_joint": -0.9571317891057186,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.24209105911845855,
+        "FR_calf_joint": -0.96,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.24,
+        "RL_calf_joint": -1.377322724183299,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.320188957207109,
+        "RR_calf_joint": -1.3439939717365688,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.335868656784026
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -3.29003460797562,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.36529999999999996,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 6.2749999999999995,
+      "joint_angles": {
+        "FL_calf_joint": -1.2685001481106817,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.3470837947247589,
+        "FR_calf_joint": -1.27,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.35,
+        "RL_calf_joint": -1.5806880042645666,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.8839226135284783,
+        "RR_calf_joint": -1.586559166434019,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.9103723278832487
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -3.4134137198187,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.37529999999999997,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 6.305,
+      "joint_angles": {
+        "FL_calf_joint": -1.2943197488489115,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.44749065922629344,
+        "FR_calf_joint": -1.29,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.45,
+        "RL_calf_joint": -1.6275431588200793,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.4542426091855563,
+        "RR_calf_joint": -1.6248964664498178,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.5185319018483228
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -3.6270627738716,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.3853,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 6.335,
+      "joint_angles": {
+        "FL_calf_joint": -1.6127619648127087,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.6333086215418287,
+        "FR_calf_joint": -1.61,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.63,
+        "RL_calf_joint": -1.6275431588200793,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.1891155650339014,
+        "RR_calf_joint": -1.6248964664498178,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.245182384254689
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -3.82,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.3903,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 6.375,
+      "joint_angles": {
+        "FL_calf_joint": -1.6127619648127087,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.5924706791744884,
+        "FR_calf_joint": -1.61,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.63,
+        "RL_calf_joint": -1.8995855660705199,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.1891155650339014,
+        "RR_calf_joint": -1.8663017169257026,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.245182384254689
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -4.1,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.3953,
+        "y": 0,
+        "z": 0.278679999999999
+      }
+    },
+    {
+      "frame_time": 6.405,
+      "joint_angles": {
+        "FL_calf_joint": -1.7654397194738891,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.3245884785633691,
+        "FR_calf_joint": -1.77,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.32,
+        "RL_calf_joint": -1.8995855660705199,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.1891155650339014,
+        "RR_calf_joint": -1.8663017169257026,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.245182384254689
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -4.3,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.4003,
+        "y": 0,
+        "z": 0.278679999999999
+      }
+    },
+    {
+      "frame_time": 6.444999999999999,
+      "joint_angles": {
+        "FL_calf_joint": -1.804768775516768,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.5254342756228506,
+        "FR_calf_joint": -1.6998336506975658,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.5735425732091287,
+        "RL_calf_joint": -1.8995855660705199,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.1891155650339014,
+        "RR_calf_joint": -1.8663017169257026,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.245182384254689
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -4.5,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.4003,
+        "y": 0,
+        "z": 0.23311999999999894
+      }
+    },
+    {
+      "frame_time": 6.475,
+      "joint_angles": {
+        "FL_calf_joint": -1.6881667856112847,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.663225,
+        "FR_calf_joint": -1.69,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.66,
+        "RL_calf_joint": -1.8995855660705199,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.1891155650339014,
+        "RR_calf_joint": -1.8663017169257026,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.245182384254689
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -4.7,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.4003,
+        "y": 0,
+        "z": 0.19435999999999903
+      }
+    },
+    {
+      "frame_time": 6.515,
+      "joint_angles": {
+        "FL_calf_joint": -1.8256292472360627,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.2425568577450589,
+        "FR_calf_joint": -1.799957770049711,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.28914508968013697,
+        "RL_calf_joint": -1.5892924857868254,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.9741031729468438,
+        "RR_calf_joint": -1.6691351298650379,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.1065610389682317
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -4.9,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.4103,
+        "y": 0,
+        "z": 0.1289
+      }
+    },
+    {
+      "frame_time": 6.545,
+      "joint_angles": {
+        "FL_calf_joint": -1.96,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.12,
+        "FR_calf_joint": -1.9624079565429025,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.11758730205788705,
+        "RL_calf_joint": -1.46,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.63,
+        "RR_calf_joint": -1.4577786651319844,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.6304735585788698
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 1.15240734641021,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.491,
+        "y": 0,
+        "z": 0.097
+      }
+    },
+    {
+      "frame_time": 6.575,
+      "joint_angles": {
+        "FL_calf_joint": -2.08,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.13,
+        "FR_calf_joint": -2.0765271520102595,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.13416207984838602,
+        "RL_calf_joint": -1.46,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.63,
+        "RR_calf_joint": -1.4577786651319844,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.6304735585788698
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 0.904407346410207,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.5361,
+        "y": 0,
+        "z": 0.0505
+      }
+    },
+    {
+      "frame_time": 6.6049999999999995,
+      "joint_angles": {
+        "FL_calf_joint": -2.1,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.85,
+        "FR_calf_joint": -2.1009990009913566,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.8461686142453065,
+        "RL_calf_joint": -1.3435934232421267,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.4806313774759584,
+        "RR_calf_joint": -1.2910547225447264,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.504830377912014
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 0.411407346410207,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.5489,
+        "y": 0,
+        "z": -0.0283
+      }
+    },
+    {
+      "frame_time": 6.6450000000000005,
+      "joint_angles": {
+        "FL_calf_joint": -1.95,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.85,
+        "FR_calf_joint": -1.952089381834638,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.8461686142453065,
+        "RL_calf_joint": -1.41,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.51,
+        "RR_calf_joint": -1.4102074380641472,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.504830377912014
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 0.246407346410207,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.5770000000000001,
+        "y": 0,
+        "z": -0.0283
+      }
+    },
+    {
+      "frame_time": 6.675,
+      "joint_angles": {
+        "FL_calf_joint": -1.95,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.85,
+        "FR_calf_joint": -1.952089381834638,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.8461686142453065,
+        "RL_calf_joint": -1.6206722155022857,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.51,
+        "RR_calf_joint": -1.587731105386133,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.504830377912014
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 0.013407346410207,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.6719,
+        "y": 0,
+        "z": -0.0283
+      }
+    },
+    {
+      "frame_time": 6.715,
+      "joint_angles": {
+        "FL_calf_joint": -1.95,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.85,
+        "FR_calf_joint": -1.8474616007001188,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.8250683598160965,
+        "RL_calf_joint": -1.6627239677326775,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.49295872609815544,
+        "RR_calf_joint": -1.648113718353649,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.504830377912014
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -0.176592653589793,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.7354,
+        "y": 0,
+        "z": -0.0283
+      }
+    },
+    {
+      "frame_time": 6.745,
+      "joint_angles": {
+        "FL_calf_joint": -0.9218137465914543,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.8005270050831395,
+        "FR_calf_joint": -0.9672345081285622,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.8432566206041406,
+        "RL_calf_joint": -1.1459375024242624,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.530624058421061,
+        "RR_calf_joint": -1.1549798699533886,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.5775599565593157
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -0.558592653589793,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.8116,
+        "y": 0,
+        "z": 0.08890000000000003
+      }
+    },
+    {
+      "frame_time": 6.745,
+      "joint_angles": {
+        "FL_calf_joint": -0.9218137465914543,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.8005270050831395,
+        "FR_calf_joint": -0.9672345081285622,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.8432566206041406,
+        "RL_calf_joint": -1.1459375024242624,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.530624058421061,
+        "RR_calf_joint": -1.1549798699533886,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.5775599565593157
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -0.558592653589793,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.8116,
+        "y": 0,
+        "z": 0.08890000000000003
+      }
+    },
+    {
+      "frame_time": 6.825,
+      "joint_angles": {
+        "FL_calf_joint": -0.9218137465914543,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 1.1961042021837225,
+        "FR_calf_joint": -0.9672345081285622,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 1.2166909801905395,
+        "RL_calf_joint": -1.3813530664856397,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.54740878333592,
+        "RR_calf_joint": -1.3592066031154322,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.5781192645750535
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -1.19659265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.7916,
+        "y": 0,
+        "z": 0.17019999999999996
+      }
+    },
+    {
+      "frame_time": 6.8549999999999995,
+      "joint_angles": {
+        "FL_calf_joint": -0.9218137465914543,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 1.0409316000090376,
+        "FR_calf_joint": -0.9672345081285622,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 1.0945149819177686,
+        "RL_calf_joint": -1.3813530664856397,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.9057218177390172,
+        "RR_calf_joint": -1.3592066031154322,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.867905847345004
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -1.40959265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.7916,
+        "y": 0,
+        "z": 0.1972
+      }
+    },
+    {
+      "frame_time": 6.895,
+      "joint_angles": {
+        "FL_calf_joint": -0.9218137465914543,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.5590165284499393,
+        "FR_calf_joint": -0.9672345081285622,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.5830482433836605,
+        "RL_calf_joint": -1.3813530664856397,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.0351664453359577,
+        "RR_calf_joint": -1.3592066031154322,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.023055036473323
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -1.55159265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.8116,
+        "y": 0,
+        "z": 0.1972
+      }
+    },
+    {
+      "frame_time": 6.925,
+      "joint_angles": {
+        "FL_calf_joint": -1.5911870784543714,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.196410528643287,
+        "FR_calf_joint": -1.5518728067904104,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.2409850102451732,
+        "RL_calf_joint": -1.1403938528317967,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.215576804264749,
+        "RR_calf_joint": -1.171527803905607,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.230518248846735
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -1.69359265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.7916,
+        "y": 0,
+        "z": 0.23110000000000003
+      }
+    },
+    {
+      "frame_time": 6.954999999999999,
+      "joint_angles": {
+        "FL_calf_joint": -0.837758,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.13742950431248896,
+        "FR_calf_joint": -0.9666218300399378,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.08325234573557994,
+        "RL_calf_joint": -0.8551804626999316,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.380165162797119,
+        "RR_calf_joint": -0.8497706960278948,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.385175234686015
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -2.04759265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.8416,
+        "y": 0,
+        "z": 0.28529999999999994
+      }
+    },
+    {
+      "frame_time": 6.985,
+      "joint_angles": {
+        "FL_calf_joint": -0.837758,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.13742950431248896,
+        "FR_calf_joint": -0.9666218300399378,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.08325234573557994,
+        "RL_calf_joint": -0.8551804626999316,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.8114056348701753,
+        "RR_calf_joint": -0.8497706960278948,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.801745733135413
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -2.47359265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.8815999999999999,
+        "y": 0,
+        "z": 0.30927999999999894
+      }
+    },
+    {
+      "frame_time": 7.005,
+      "joint_angles": {
+        "FL_calf_joint": -0.837758,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.13742950431248896,
+        "FR_calf_joint": -0.9666218300399378,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.08325234573557994,
+        "RL_calf_joint": -0.8551804626999316,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.8114056348701753,
+        "RR_calf_joint": -0.8497706960278948,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.801745733135413
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -2.89859265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.9216,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 7.034999999999999,
+      "joint_angles": {
+        "FL_calf_joint": -0.837758,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.13742950431248896,
+        "FR_calf_joint": -0.9666218300399378,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.08325234573557994,
+        "RL_calf_joint": -0.8551804626999316,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.8114056348701753,
+        "RR_calf_joint": -0.8497706960278948,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.801745733135413
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -3.11159265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.9516,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 7.075,
+      "joint_angles": {
+        "FL_calf_joint": -0.9571317891057186,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.24209105911845855,
+        "FR_calf_joint": -0.96,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.24,
+        "RL_calf_joint": -1.377322724183299,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.320188957207109,
+        "RR_calf_joint": -1.3439939717365688,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.335868656784026
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -3.29003460797562,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.9865999999999999,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 7.1049999999999995,
+      "joint_angles": {
+        "FL_calf_joint": -1.2685001481106817,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.3470837947247589,
+        "FR_calf_joint": -1.27,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.35,
+        "RL_calf_joint": -1.5806880042645666,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.8839226135284783,
+        "RR_calf_joint": -1.586559166434019,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.9103723278832487
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -3.4134137198187,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -0.9965999999999999,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 7.135,
+      "joint_angles": {
+        "FL_calf_joint": -1.2943197488489115,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.44749065922629344,
+        "FR_calf_joint": -1.29,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.45,
+        "RL_calf_joint": -1.6275431588200793,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.4542426091855563,
+        "RR_calf_joint": -1.6248964664498178,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.5185319018483228
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -3.6270627738716,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.0066,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 7.165,
+      "joint_angles": {
+        "FL_calf_joint": -1.6127619648127087,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.6333086215418287,
+        "FR_calf_joint": -1.61,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.63,
+        "RL_calf_joint": -1.6275431588200793,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.1891155650339014,
+        "RR_calf_joint": -1.6248964664498178,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.245182384254689
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -3.82,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.0116,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 7.205,
+      "joint_angles": {
+        "FL_calf_joint": -1.6127619648127087,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.5924706791744884,
+        "FR_calf_joint": -1.61,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.63,
+        "RL_calf_joint": -1.8995855660705199,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.1891155650339014,
+        "RR_calf_joint": -1.8663017169257026,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.245182384254689
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -4.1,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.0166,
+        "y": 0,
+        "z": 0.278679999999999
+      }
+    },
+    {
+      "frame_time": 7.235,
+      "joint_angles": {
+        "FL_calf_joint": -1.7654397194738891,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.3245884785633691,
+        "FR_calf_joint": -1.77,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.32,
+        "RL_calf_joint": -1.8995855660705199,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.1891155650339014,
+        "RR_calf_joint": -1.8663017169257026,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.245182384254689
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -4.3,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.0216,
+        "y": 0,
+        "z": 0.278679999999999
+      }
+    },
+    {
+      "frame_time": 7.2749999999999995,
+      "joint_angles": {
+        "FL_calf_joint": -1.804768775516768,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.5254342756228506,
+        "FR_calf_joint": -1.6998336506975658,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.5735425732091287,
+        "RL_calf_joint": -1.8995855660705199,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.1891155650339014,
+        "RR_calf_joint": -1.8663017169257026,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.245182384254689
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -4.5,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.0216,
+        "y": 0,
+        "z": 0.23311999999999894
+      }
+    },
+    {
+      "frame_time": 7.305,
+      "joint_angles": {
+        "FL_calf_joint": -1.6881667856112847,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.663225,
+        "FR_calf_joint": -1.69,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.66,
+        "RL_calf_joint": -1.8995855660705199,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.1891155650339014,
+        "RR_calf_joint": -1.8663017169257026,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.245182384254689
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -4.7,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.0216,
+        "y": 0,
+        "z": 0.19435999999999903
+      }
+    },
+    {
+      "frame_time": 7.345,
+      "joint_angles": {
+        "FL_calf_joint": -1.8256292472360627,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.2425568577450589,
+        "FR_calf_joint": -1.799957770049711,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.28914508968013697,
+        "RL_calf_joint": -1.5892924857868254,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.9741031729468438,
+        "RR_calf_joint": -1.6691351298650379,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.1065610389682317
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -4.9,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.0316,
+        "y": 0,
+        "z": 0.1289
+      }
+    },
+    {
+      "frame_time": 7.375,
+      "joint_angles": {
+        "FL_calf_joint": -1.96,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.12,
+        "FR_calf_joint": -1.9624079565429025,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.11758730205788705,
+        "RL_calf_joint": -1.46,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.63,
+        "RR_calf_joint": -1.4577786651319844,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.6304735585788698
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 1.15240734641021,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.1123,
+        "y": 0,
+        "z": 0.097
+      }
+    },
+    {
+      "frame_time": 7.405,
+      "joint_angles": {
+        "FL_calf_joint": -2.08,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.13,
+        "FR_calf_joint": -2.0765271520102595,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.13416207984838602,
+        "RL_calf_joint": -1.46,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.63,
+        "RR_calf_joint": -1.4577786651319844,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.6304735585788698
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 0.904407346410207,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.1574,
+        "y": 0,
+        "z": 0.0505
+      }
+    },
+    {
+      "frame_time": 7.435,
+      "joint_angles": {
+        "FL_calf_joint": -2.1,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.85,
+        "FR_calf_joint": -2.1009990009913566,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.8461686142453065,
+        "RL_calf_joint": -1.3435934232421267,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.4806313774759584,
+        "RR_calf_joint": -1.2910547225447264,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.504830377912014
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 0.411407346410207,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.1702,
+        "y": 0,
+        "z": -0.0283
+      }
+    },
+    {
+      "frame_time": 7.4750000000000005,
+      "joint_angles": {
+        "FL_calf_joint": -1.95,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.85,
+        "FR_calf_joint": -1.952089381834638,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.8461686142453065,
+        "RL_calf_joint": -1.41,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.51,
+        "RR_calf_joint": -1.4102074380641472,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.504830377912014
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 0.246407346410207,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.1983000000000001,
+        "y": 0,
+        "z": -0.0283
+      }
+    },
+    {
+      "frame_time": 7.505,
+      "joint_angles": {
+        "FL_calf_joint": -1.95,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.85,
+        "FR_calf_joint": -1.952089381834638,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.8461686142453065,
+        "RL_calf_joint": -1.6206722155022857,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.51,
+        "RR_calf_joint": -1.587731105386133,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.504830377912014
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 0.013407346410207,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.2932000000000001,
+        "y": 0,
+        "z": -0.0283
+      }
+    },
+    {
+      "frame_time": 7.545,
+      "joint_angles": {
+        "FL_calf_joint": -1.95,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.85,
+        "FR_calf_joint": -1.8474616007001188,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.8250683598160965,
+        "RL_calf_joint": -1.6627239677326775,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.49295872609815544,
+        "RR_calf_joint": -1.648113718353649,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.504830377912014
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -0.176592653589793,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.3567,
+        "y": 0,
+        "z": -0.0283
+      }
+    },
+    {
+      "frame_time": 7.575,
+      "joint_angles": {
+        "FL_calf_joint": -0.9218137465914543,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.8005270050831395,
+        "FR_calf_joint": -0.9672345081285622,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.8432566206041406,
+        "RL_calf_joint": -1.1459375024242624,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.530624058421061,
+        "RR_calf_joint": -1.1549798699533886,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.5775599565593157
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -0.558592653589793,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.4329,
+        "y": 0,
+        "z": 0.08890000000000003
+      }
+    },
+    {
+      "frame_time": 7.575,
+      "joint_angles": {
+        "FL_calf_joint": -0.9218137465914543,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.8005270050831395,
+        "FR_calf_joint": -0.9672345081285622,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.8432566206041406,
+        "RL_calf_joint": -1.1459375024242624,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 0.530624058421061,
+        "RR_calf_joint": -1.1549798699533886,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 0.5775599565593157
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -0.558592653589793,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.4329,
+        "y": 0,
+        "z": 0.08890000000000003
+      }
+    },
+    {
+      "frame_time": 7.655,
+      "joint_angles": {
+        "FL_calf_joint": -0.9218137465914543,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 1.1961042021837225,
+        "FR_calf_joint": -0.9672345081285622,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 1.2166909801905395,
+        "RL_calf_joint": -1.3813530664856397,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.54740878333592,
+        "RR_calf_joint": -1.3592066031154322,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.5781192645750535
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -1.19659265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.4129,
+        "y": 0,
+        "z": 0.17019999999999996
+      }
+    },
+    {
+      "frame_time": 7.685,
+      "joint_angles": {
+        "FL_calf_joint": -0.9218137465914543,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 1.0409316000090376,
+        "FR_calf_joint": -0.9672345081285622,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 1.0945149819177686,
+        "RL_calf_joint": -1.3813530664856397,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.9057218177390172,
+        "RR_calf_joint": -1.3592066031154322,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.867905847345004
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -1.40959265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.4129,
+        "y": 0,
+        "z": 0.1972
+      }
+    },
+    {
+      "frame_time": 7.7250000000000005,
+      "joint_angles": {
+        "FL_calf_joint": -0.9218137465914543,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.5590165284499393,
+        "FR_calf_joint": -0.9672345081285622,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.5830482433836605,
+        "RL_calf_joint": -1.3813530664856397,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.0351664453359577,
+        "RR_calf_joint": -1.3592066031154322,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.023055036473323
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -1.55159265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.4329,
+        "y": 0,
+        "z": 0.1972
+      }
+    },
+    {
+      "frame_time": 7.755,
+      "joint_angles": {
+        "FL_calf_joint": -1.5911870784543714,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.196410528643287,
+        "FR_calf_joint": -1.5518728067904104,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.2409850102451732,
+        "RL_calf_joint": -1.1403938528317967,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.215576804264749,
+        "RR_calf_joint": -1.171527803905607,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.230518248846735
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -1.69359265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.4129,
+        "y": 0,
+        "z": 0.23110000000000003
+      }
+    },
+    {
+      "frame_time": 7.784999999999999,
+      "joint_angles": {
+        "FL_calf_joint": -0.837758,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.13742950431248896,
+        "FR_calf_joint": -0.9666218300399378,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.08325234573557994,
+        "RL_calf_joint": -0.8551804626999316,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.380165162797119,
+        "RR_calf_joint": -0.8497706960278948,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.385175234686015
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -2.04759265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.4628999999999999,
+        "y": 0,
+        "z": 0.28529999999999994
+      }
+    },
+    {
+      "frame_time": 7.815,
+      "joint_angles": {
+        "FL_calf_joint": -0.837758,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.13742950431248896,
+        "FR_calf_joint": -0.9666218300399378,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.08325234573557994,
+        "RL_calf_joint": -0.8551804626999316,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.8114056348701753,
+        "RR_calf_joint": -0.8497706960278948,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.801745733135413
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -2.47359265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.5029,
+        "y": 0,
+        "z": 0.30927999999999894
+      }
+    },
+    {
+      "frame_time": 7.835,
+      "joint_angles": {
+        "FL_calf_joint": -0.837758,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.13742950431248896,
+        "FR_calf_joint": -0.9666218300399378,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.08325234573557994,
+        "RL_calf_joint": -0.8551804626999316,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.8114056348701753,
+        "RR_calf_joint": -0.8497706960278948,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.801745733135413
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -2.89859265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.5429,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 7.864999999999999,
+      "joint_angles": {
+        "FL_calf_joint": -0.837758,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.13742950431248896,
+        "FR_calf_joint": -0.9666218300399378,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.08325234573557994,
+        "RL_calf_joint": -0.8551804626999316,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.8114056348701753,
+        "RR_calf_joint": -0.8497706960278948,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.801745733135413
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -3.11159265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.5729,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 7.905000000000001,
+      "joint_angles": {
+        "FL_calf_joint": -0.9571317891057186,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.24209105911845855,
+        "FR_calf_joint": -0.96,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.24,
+        "RL_calf_joint": -1.377322724183299,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.320188957207109,
+        "RR_calf_joint": -1.3439939717365688,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.335868656784026
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -3.29003460797562,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.6078999999999999,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 7.934999999999999,
+      "joint_angles": {
+        "FL_calf_joint": -1.2685001481106817,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.3470837947247589,
+        "FR_calf_joint": -1.27,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.35,
+        "RL_calf_joint": -1.5806880042645666,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.8839226135284783,
+        "RR_calf_joint": -1.586559166434019,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.9103723278832487
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -3.4134137198187,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.6179,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 7.965,
+      "joint_angles": {
+        "FL_calf_joint": -1.2943197488489115,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.44749065922629344,
+        "FR_calf_joint": -1.29,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.45,
+        "RL_calf_joint": -1.6275431588200793,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.4542426091855563,
+        "RR_calf_joint": -1.6248964664498178,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.5185319018483228
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -3.6270627738716,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.6279,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 7.995000000000001,
+      "joint_angles": {
+        "FL_calf_joint": -1.6127619648127087,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.6333086215418287,
+        "FR_calf_joint": -1.61,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.63,
+        "RL_calf_joint": -1.6275431588200793,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.1891155650339014,
+        "RR_calf_joint": -1.6248964664498178,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.245182384254689
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -3.82,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.6329,
+        "y": 0,
+        "z": 0.325
+      }
+    },
+    {
+      "frame_time": 8.035,
+      "joint_angles": {
+        "FL_calf_joint": -1.6127619648127087,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.5924706791744884,
+        "FR_calf_joint": -1.61,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.63,
+        "RL_calf_joint": -1.8995855660705199,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.5840666479497272,
+        "RR_calf_joint": -1.8663017169257026,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.5743410363945698
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -4.1,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.6379,
+        "y": 0,
+        "z": 0.278679999999999
+      }
+    },
+    {
+      "frame_time": 8.065000000000001,
+      "joint_angles": {
+        "FL_calf_joint": -1.7654397194738891,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.5347798894159227,
+        "FR_calf_joint": -1.77,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.5540103085056867,
+        "RL_calf_joint": -1.8995855660705199,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.7871804789248793,
+        "RR_calf_joint": -1.8663017169257026,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.7971977783915212
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -4.3,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.6429,
+        "y": 0,
+        "z": 0.2342
+      }
+    },
+    {
+      "frame_time": 8.094999999999999,
+      "joint_angles": {
+        "FL_calf_joint": -1.804768775516768,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.6075448825813367,
+        "FR_calf_joint": -1.6998336506975658,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.6380304364542225,
+        "RL_calf_joint": -1.8995855660705199,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.9434625809485881,
+        "RR_calf_joint": -1.8106680391454832,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.887888190106812
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -4.5,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.6429,
+        "y": 0,
+        "z": 0.1399
+      }
+    },
+    {
+      "frame_time": 8.135,
+      "joint_angles": {
+        "FL_calf_joint": -1.804768775516768,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.6075448825813367,
+        "FR_calf_joint": -1.6998336506975658,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.6380304364542225,
+        "RL_calf_joint": -1.8995855660705199,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.9434625809485881,
+        "RR_calf_joint": -1.8106680391454832,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.887888190106812
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -4.5,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.6429,
+        "y": 0,
+        "z": 0.1399
+      }
+    },
+    {
+      "frame_time": 8.165,
+      "joint_angles": {
+        "FL_calf_joint": -1.666491066959027,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.578880743047634,
+        "FR_calf_joint": -1.67,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.58,
+        "RL_calf_joint": -1.3465120139360904,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.7628291857001441,
+        "RR_calf_joint": -1.35,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.76
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 1.98040734641021,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.528,
+        "y": 0,
+        "z": 0.0983
+      }
+    },
+    {
+      "frame_time": 8.184999999999999,
+      "joint_angles": {
+        "FL_calf_joint": -1.7446973884725947,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.617528176752291,
+        "FR_calf_joint": -1.74,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.62,
+        "RL_calf_joint": -1.3465120139360904,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.3439470849819477,
+        "RR_calf_joint": -1.35,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.34
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 2.13240734641021,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.4979,
+        "y": 0,
+        "z": 0.06469999999999998
+      }
+    },
+    {
+      "frame_time": 8.25,
+      "joint_angles": {
+        "FL_calf_joint": -1.7446973884725947,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.617528176752291,
+        "FR_calf_joint": -1.74,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.62,
+        "RL_calf_joint": -2.117047366584817,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.8333180861737164,
+        "RR_calf_joint": -2.12,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.83
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 2.51040734641021,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.4979,
+        "y": 0,
+        "z": 0.06469999999999998
+      }
+    },
+    {
+      "frame_time": 8.28,
+      "joint_angles": {
+        "FL_calf_joint": -1.9395680324380487,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.617528176752291,
+        "FR_calf_joint": -1.8911172464607822,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.62,
+        "RL_calf_joint": -2.5340127151482017,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.8333180861737164,
+        "RR_calf_joint": -2.5043600037576406,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.83
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": 3.06540734641021,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.4979,
+        "y": 0,
+        "z": 0.06469999999999998
+      }
+    },
+    {
+      "frame_time": 8.34,
+      "joint_angles": {
+        "FL_calf_joint": -1.9395680324380487,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.617528176752291,
+        "FR_calf_joint": -1.8911172464607822,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.62,
+        "RL_calf_joint": -2.5340127151482017,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.8333180861737164,
+        "RR_calf_joint": -2.5043600037576406,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.83
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -2.71259265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.4979,
+        "y": 0,
+        "z": 0.06469999999999998
+      }
+    },
+    {
+      "frame_time": 8.389999999999999,
+      "joint_angles": {
+        "FL_calf_joint": -1.426304310542267,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": -0.141550635996639,
+        "FR_calf_joint": -1.43,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": -0.14,
+        "RL_calf_joint": -2.244844216390241,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.9670595,
+        "RR_calf_joint": -2.24,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.9670595
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -2.18259265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.4979,
+        "y": 0,
+        "z": 0.06469999999999998
+      }
+    },
+    {
+      "frame_time": 8.43,
+      "joint_angles": {
+        "FL_calf_joint": -1.426304310542267,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.22550574225302772,
+        "FR_calf_joint": -1.43,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.217817379195655,
+        "RL_calf_joint": -2.244844216390241,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.9670595,
+        "RR_calf_joint": -2.24,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.9670595
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -1.82959265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.4641,
+        "y": 0,
+        "z": 0.05230000000000001
+      }
+    },
+    {
+      "frame_time": 8.529999999999998,
+      "joint_angles": {
+        "FL_calf_joint": -1.1360283848984938,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.3501357948557825,
+        "FR_calf_joint": -1.14,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.35,
+        "RL_calf_joint": -2.4719425848435463,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.7900594735133604,
+        "RR_calf_joint": -2.47,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.79
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -1.40059265358979,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.353,
+        "y": 0,
+        "z": 0.01200000000000001
+      }
+    },
+    {
+      "frame_time": 8.584999999999999,
+      "joint_angles": {
+        "FL_calf_joint": -0.837758,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.7793962344029294,
+        "FR_calf_joint": -0.84,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.78,
+        "RL_calf_joint": -2.4719425848435463,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 2.7900594735133604,
+        "RR_calf_joint": -2.47,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 2.79
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -0.895592653589793,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.2208,
+        "y": 0,
+        "z": -0.05299999999999999
+      }
+    },
+    {
+      "frame_time": 8.625,
+      "joint_angles": {
+        "FL_calf_joint": -1.1536766890449366,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.9999209329346438,
+        "FR_calf_joint": -0.84,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.78,
+        "RL_calf_joint": -1.9014106370943806,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1.4373080352937575,
+        "RR_calf_joint": -1.9,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1.44
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -0.441592653589793,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.2486,
+        "y": 0,
+        "z": 0.010599999999999998
+      }
+    },
+    {
+      "frame_time": 8.669999999999998,
+      "joint_angles": {
+        "FL_calf_joint": -1.5,
+        "FL_hip_joint": 0,
+        "FL_thigh_joint": 0.8,
+        "FR_calf_joint": -1.5,
+        "FR_hip_joint": 0,
+        "FR_thigh_joint": 0.8,
+        "RL_calf_joint": -1.5032646074708995,
+        "RL_hip_joint": 0,
+        "RL_thigh_joint": 1,
+        "RR_calf_joint": -1.5,
+        "RR_hip_joint": 0,
+        "RR_thigh_joint": 1
+      },
+      "rpy": {
+        "roll": 0,
+        "pitch": -0.012592653589793,
+        "yaw": 0
+      },
+      "pos_world": {
+        "x": -1.1733,
+        "y": 0,
+        "z": -0.011199999999999988
+      }
+    }
+  ]
+}
