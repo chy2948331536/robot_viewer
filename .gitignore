@@ -28,3 +28,9 @@ Thumbs.db
 # Cache
 .cache/
 
+# Frame data (ignored in code branches, tracked in frames-data branch)
+# Note: frames/ is NOT ignored in this branch (frames-data)
+# To ignore frames in other branches, uncomment the line below:
+# frames/
+
+frames/**

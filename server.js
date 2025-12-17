@@ -1,0 +1,657 @@
+/**
+ * Express 后端服务器 - 提供文件列表 API
+ * 用于扫描 frames 文件夹下的 JSON 文件
+ */
+
+import express from 'express';
+import cors from 'cors';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Load environment variables from .env file
+function loadEnv() {
+    const envPath = path.join(__dirname, '.env');
+    if (fs.existsSync(envPath)) {
+        const envContent = fs.readFileSync(envPath, 'utf8');
+        const envVars = {};
+        envContent.split('\n').forEach(line => {
+            line = line.trim();
+            if (line && !line.startsWith('#')) {
+                const [key, ...valueParts] = line.split('=');
+                if (key && valueParts.length > 0) {
+                    envVars[key.trim()] = valueParts.join('=').trim();
+                }
+            }
+        });
+        return envVars;
+    }
+    return {};
+}
+
+const env = loadEnv();
+const PORT = parseInt(env.BACKEND_PORT || process.env.BACKEND_PORT || '3002', 10);
+
+const app = express();
+
+// 启用 CORS
+app.use(cors());
+// 解析 JSON body - 增加请求体大小限制到 50MB
+app.use(express.json({ limit: '50mb' }));
+// 解析 URL 编码的 body - 也增加限制
+app.use(express.urlencoded({ extended: true, limit: '50mb' }));
+
+/**
+ * 自然排序函数 - 处理 frame_1, frame_2, frame_10 这样的文件名
+ */
+function naturalSort(files) {
+    return files.sort((a, b) => {
+        const aNum = a.match(/\d+/)?.[0];
+        const bNum = b.match(/\d+/)?.[0];
+        
+        if (aNum && bNum) {
+            return parseInt(aNum) - parseInt(bNum);
+        }
+        
+        return a.localeCompare(b);
+    });
+}
+
+/**
+ * API 端点：列出指定文件夹中的 JSON 文件
+ * 使用: GET /api/list-json-files?folder=./frames
+ */
+app.get('/api/list-json-files', (req, res) => {
+    try {
+        const folderPath = req.query.folder || './frames';
+        
+        // 解析相对路径 - 相对于项目根目录
+        const absolutePath = path.resolve(__dirname, folderPath);
+        
+        // 安全检查 - 确保路径在允许的目录中
+        const realPath = fs.realpathSync(absolutePath);
+        const baseDir = fs.realpathSync(__dirname);
+        
+        if (!realPath.startsWith(baseDir)) {
+            return res.status(403).json({ 
+                error: 'Access denied',
+                count: 0,
+                files: []
+            });
+        }
+        
+        // 检查文件夹是否存在
+        if (!fs.existsSync(realPath) || !fs.statSync(realPath).isDirectory()) {
+            return res.status(404).json({ 
+                error: 'Folder not found',
+                count: 0,
+                files: []
+            });
+        }
+        
+        // 递归列出文件夹中的所有 JSON 文件
+        const jsonFiles = [];
+        
+        function scanDirectory(dirPath, relativePath = '') {
+            const entries = fs.readdirSync(dirPath, { withFileTypes: true });
+            
+            for (const entry of entries) {
+                const fullPath = path.join(dirPath, entry.name);
+                const relativeFilePath = relativePath ? `${relativePath}/${entry.name}` : entry.name;
+                
+                if (entry.isDirectory()) {
+                    // 递归扫描子目录
+                    scanDirectory(fullPath, relativeFilePath);
+                } else if (entry.isFile() && entry.name.endsWith('.json')) {
+                    // 添加 JSON 文件，保留相对路径
+                    jsonFiles.push(relativeFilePath);
+                }
+            }
+        }
+        
+        scanDirectory(realPath);
+        
+        // 自然排序
+        const sortedFiles = naturalSort(jsonFiles);
+        
+        // 返回结果
+        res.json({
+            count: sortedFiles.length,
+            files: sortedFiles,
+            folder: folderPath
+        });
+        
+    } catch (error) {
+        console.error('Error listing files:', error);
+        res.status(500).json({ 
+            error: error.message,
+            count: 0,
+            files: []
+        });
+    }
+});
+
+/**
+ * API 端点：读取帧文件
+ * 使用: GET /api/read-frame-file?file=./frames/frame_robot.json
+ */
+app.get('/api/read-frame-file', (req, res) => {
+    try {
+        const filePath = req.query.file || '';
+        
+        if (!filePath) {
+            return res.status(400).json({ 
+                error: 'File path is required',
+                frames: []
+            });
+        }
+        
+        // 解析相对路径 - 相对于项目根目录
+        const absolutePath = path.resolve(__dirname, filePath);
+        
+        // 安全检查 - 确保路径在允许的目录中
+        const realPath = fs.realpathSync(absolutePath);
+        const baseDir = fs.realpathSync(__dirname);
+        
+        if (!realPath.startsWith(baseDir)) {
+            return res.status(403).json({ 
+                error: 'Access denied',
+                frames: []
+            });
+        }
+        
+        // 检查文件是否存在
+        if (!fs.existsSync(realPath) || !fs.statSync(realPath).isFile()) {
+            return res.json({ 
+                frames: [],
+                message: 'File not found, will create new file'
+            });
+        }
+        
+        // 读取文件内容
+        const fileContent = fs.readFileSync(realPath, 'utf8');
+        const data = JSON.parse(fileContent);
+        
+        // 确保 frames 数组存在并按时间排序
+        if (!data.frames || !Array.isArray(data.frames)) {
+            return res.json({ 
+                frames: [],
+                message: 'Invalid file format'
+            });
+        }
+        
+        // 按 frame_time 排序
+        data.frames.sort((a, b) => (a.frame_time || 0) - (b.frame_time || 0));
+        
+        res.json({
+            frames: data.frames,
+            count: data.frames.length
+        });
+        
+    } catch (error) {
+        console.error('Error reading frame file:', error);
+        res.status(500).json({ 
+            error: error.message,
+            frames: []
+        });
+    }
+});
+
+/**
+ * API 端点：保存帧文件
+ * 使用: POST /api/save-frame-file
+ * Body: { file: './frames/frame_robot.json', frame: {...}, frameTime: 1.5 }
+ */
+app.post('/api/save-frame-file', (req, res) => {
+    try {
+        const { file, frame, frameTime } = req.body;
+        
+        if (!file || !frame || frameTime === undefined) {
+            return res.status(400).json({ 
+                error: 'File path, frame data, and frameTime are required'
+            });
+        }
+        
+        // 解析相对路径 - 相对于项目根目录
+        const absolutePath = path.resolve(__dirname, file);
+        
+        // 安全检查 - 确保路径在允许的目录中
+        const realPath = fs.realpathSync(path.dirname(absolutePath));
+        const baseDir = fs.realpathSync(__dirname);
+        
+        if (!realPath.startsWith(baseDir)) {
+            return res.status(403).json({ 
+                error: 'Access denied'
+            });
+        }
+        
+        // 确保目录存在
+        const dirPath = path.dirname(absolutePath);
+        if (!fs.existsSync(dirPath)) {
+            fs.mkdirSync(dirPath, { recursive: true });
+        }
+        
+        // 读取现有文件（如果存在）
+        let frames = [];
+        if (fs.existsSync(absolutePath)) {
+            try {
+                const fileContent = fs.readFileSync(absolutePath, 'utf8');
+                const data = JSON.parse(fileContent);
+                if (data.frames && Array.isArray(data.frames)) {
+                    frames = data.frames;
+                }
+            } catch (e) {
+                // 如果文件格式错误，创建新文件
+                console.warn('Invalid file format, creating new file:', e.message);
+            }
+        }
+        
+        // 查找是否已存在相同时间的帧
+        const existingIndex = frames.findIndex(f => Math.abs((f.frame_time || 0) - frameTime) < 0.0001);
+        
+        if (existingIndex >= 0) {
+            // 更新现有帧
+            frames[existingIndex] = frame;
+        } else {
+            // 添加新帧
+            frames.push(frame);
+        }
+        
+        // 按 frame_time 排序
+        frames.sort((a, b) => (a.frame_time || 0) - (b.frame_time || 0));
+        
+        // 保存文件
+        const dataToSave = { frames };
+        fs.writeFileSync(absolutePath, JSON.stringify(dataToSave, null, 2), 'utf8');
+        
+        res.json({
+            success: true,
+            count: frames.length,
+            message: existingIndex >= 0 ? 'Frame updated' : 'Frame added'
+        });
+        
+    } catch (error) {
+        console.error('Error saving frame file:', error);
+        res.status(500).json({ 
+            error: error.message
+        });
+    }
+});
+
+/**
+ * API 端点：保存 CSV 文件
+ * 使用: POST /api/save-csv-file
+ * Body: { file: './frames/lafan/robot.csv', content: 'csv content...' }
+ */
+app.post('/api/save-csv-file', (req, res) => {
+    try {
+        const { file, content } = req.body;
+        
+        if (!file || content === undefined) {
+            return res.status(400).json({ 
+                error: 'File path and content are required'
+            });
+        }
+        
+        // 解析相对路径 - 相对于项目根目录
+        const absolutePath = path.resolve(__dirname, file);
+        
+        // 安全检查 - 确保路径在允许的目录中
+        const realPath = fs.realpathSync(path.dirname(absolutePath));
+        const baseDir = fs.realpathSync(__dirname);
+        
+        if (!realPath.startsWith(baseDir)) {
+            return res.status(403).json({ 
+                error: 'Access denied'
+            });
+        }
+        
+        // 确保目录存在
+        const dirPath = path.dirname(absolutePath);
+        if (!fs.existsSync(dirPath)) {
+            fs.mkdirSync(dirPath, { recursive: true });
+        }
+        
+        // 保存文件
+        fs.writeFileSync(absolutePath, content, 'utf8');
+        
+        res.json({
+            success: true,
+            file: file,
+            message: 'CSV file saved successfully'
+        });
+        
+    } catch (error) {
+        console.error('Error saving CSV file:', error);
+        res.status(500).json({ 
+            error: error.message
+        });
+    }
+});
+
+/**
+ * API 端点：应用偏移量和时间缩放到文件中的所有帧
+ * 使用: POST /api/apply-offset
+ * Body: { file: './frames/frame_robot.json', offset: { x: 0.1, y: 0.2, z: 0.3 }, timeScale: 0.5 }
+ */
+app.post('/api/apply-offset', (req, res) => {
+    try {
+        const { file, offset, timeScale, timeOffset, startFrameTime } = req.body;
+        
+        if (!file) {
+            return res.status(400).json({ 
+                error: 'File path is required'
+            });
+        }
+
+        // 验证offset对象（允许为null或undefined，表示不应用空间偏移）
+        if (offset !== null && offset !== undefined) {
+            // 如果提供了offset，验证其值（允许x, y, z为null/undefined，表示不应用该轴的偏移）
+            if (offset.x !== null && offset.x !== undefined && typeof offset.x !== 'number') {
+                return res.status(400).json({ 
+                    error: 'Offset x must be a number or null/undefined'
+                });
+            }
+            if (offset.y !== null && offset.y !== undefined && typeof offset.y !== 'number') {
+                return res.status(400).json({ 
+                    error: 'Offset y must be a number or null/undefined'
+                });
+            }
+            if (offset.z !== null && offset.z !== undefined && typeof offset.z !== 'number') {
+                return res.status(400).json({ 
+                    error: 'Offset z must be a number or null/undefined'
+                });
+            }
+        }
+
+        // 验证时间缩放参数
+        const scale = timeScale !== undefined ? parseFloat(timeScale) : 1.0;
+        if (isNaN(scale) || scale <= 0) {
+            return res.status(400).json({ 
+                error: 'Time scale must be a positive number'
+            });
+        }
+
+        // 验证时间偏移参数（允许为undefined，表示不应用时间偏移）
+        let tOffset = undefined;
+        if (timeOffset !== undefined && timeOffset !== null) {
+            tOffset = parseFloat(timeOffset);
+            if (isNaN(tOffset)) {
+                return res.status(400).json({ 
+                    error: 'Time offset must be a number'
+                });
+            }
+        }
+
+        // 验证起始帧时间参数（允许为undefined，表示从第一帧开始）
+        let startFrameTimeValue = undefined;
+        if (startFrameTime !== undefined && startFrameTime !== null) {
+            startFrameTimeValue = parseFloat(startFrameTime);
+            if (isNaN(startFrameTimeValue) || startFrameTimeValue < 0) {
+                return res.status(400).json({ 
+                    error: 'Start frame time must be a non-negative number'
+                });
+            }
+        }
+        
+        console.log(`[apply-offset] timeOffset: ${tOffset !== undefined ? tOffset : 'none'}, timeScale: ${scale}, startFrameTime: ${startFrameTimeValue !== undefined ? startFrameTimeValue : 'none'}`);
+        
+        // 解析相对路径 - 相对于项目根目录
+        const absolutePath = path.resolve(__dirname, file);
+        
+        // 安全检查 - 确保路径在允许的目录中
+        const realPath = fs.realpathSync(path.dirname(absolutePath));
+        const baseDir = fs.realpathSync(__dirname);
+        
+        if (!realPath.startsWith(baseDir)) {
+            return res.status(403).json({ 
+                error: 'Access denied'
+            });
+        }
+        
+        // 检查文件是否存在
+        if (!fs.existsSync(absolutePath) || !fs.statSync(absolutePath).isFile()) {
+            return res.status(404).json({ 
+                error: 'File not found'
+            });
+        }
+        
+        // 读取文件内容
+        const fileContent = fs.readFileSync(absolutePath, 'utf8');
+        const data = JSON.parse(fileContent);
+        
+        // 确保 frames 数组存在
+        if (!data.frames || !Array.isArray(data.frames)) {
+            return res.status(400).json({ 
+                error: 'Invalid file format: expected frames array'
+            });
+        }
+        
+        if (data.frames.length === 0) {
+            return res.status(400).json({ 
+                error: 'No frames found in file'
+            });
+        }
+
+        // 先按 frame_time 排序
+        data.frames.sort((a, b) => (a.frame_time || 0) - (b.frame_time || 0));
+
+        // 根据起始帧时间找到对应的帧索引
+        // 如果指定了startFrameTime，找到第一个frame_time >= startFrameTime的帧
+        // 如果没有指定，则从第一帧开始（索引0）
+        let actualStartFrame = 0;
+        if (startFrameTimeValue !== undefined) {
+            // 找到第一个frame_time >= startFrameTimeValue的帧
+            const foundIndex = data.frames.findIndex(frame => (frame.frame_time || 0) >= startFrameTimeValue);
+            if (foundIndex >= 0) {
+                actualStartFrame = foundIndex;
+            } else {
+                // 如果所有帧的frame_time都小于startFrameTimeValue，则从最后一帧开始
+                actualStartFrame = data.frames.length - 1;
+            }
+            console.log(`[apply-offset] Found start frame at index ${actualStartFrame} with frame_time ${data.frames[actualStartFrame]?.frame_time || 0} for requested time ${startFrameTimeValue}`);
+        }
+
+        // 应用时间缩放
+        // 例如: 原始时间 [1.5, 2.0, 3.0], 缩放 0.5
+        // 间隔: [0.5, 1.0] -> 缩放后: [0.25, 0.5]
+        // 累加到第一帧: [1.5, 1.75, 2.25]
+        let updatedFrames = [];
+        if (scale !== 1.0) {
+            // 如果起始帧大于0，起始帧之前的所有帧保持不变
+            // 起始帧的时间保持不变，但起始帧之后的时间间隔需要缩放
+            let accumulatedTime = actualStartFrame > 0 
+                ? data.frames[actualStartFrame].frame_time || 0 
+                : data.frames[0].frame_time || 0;
+            
+            updatedFrames = data.frames.map((frame, index) => {
+                const updatedFrame = JSON.parse(JSON.stringify(frame));
+                
+                // 起始帧之前的帧保持不变
+                if (index < actualStartFrame) {
+                    updatedFrame.frame_time = frame.frame_time || 0;
+                    return updatedFrame;
+                }
+                
+                // 起始帧的时间保持不变
+                if (index === actualStartFrame) {
+                    updatedFrame.frame_time = accumulatedTime;
+                } else {
+                    // 计算与前一帧的时间间隔
+                    const prevFrameTime = data.frames[index - 1].frame_time || 0;
+                    const currentFrameTime = frame.frame_time || 0;
+                    const interval = currentFrameTime - prevFrameTime;
+                    
+                    // 缩放时间间隔并累加
+                    const scaledInterval = interval * scale;
+                    accumulatedTime += scaledInterval;
+                    updatedFrame.frame_time = accumulatedTime;
+                }
+                
+                return updatedFrame;
+            });
+        } else {
+            updatedFrames = data.frames.map(frame => JSON.parse(JSON.stringify(frame)));
+        }
+        
+        // 计算偏移量：目标值 - 起始帧当前值
+        // x, y, z 和 timeOffset 都是目标值，需要计算与起始帧的差值作为偏移
+        // 如果值为null/undefined，则不应用该轴的偏移
+        if (updatedFrames.length > 0) {
+            const startFrameData = updatedFrames[actualStartFrame];
+            
+            // 获取起始帧的当前值
+            const startFrameTimeValue_current = startFrameData.frame_time || 0;
+            const startFramePos = startFrameData.pos_world || { x: 0, y: 0, z: 0 };
+            const startFrameX = startFramePos.x ?? 0;
+            const startFrameY = startFramePos.y ?? 0;
+            const startFrameZ = startFramePos.z ?? 0;
+            
+            // 计算偏移量 = 目标值 - 起始帧当前值（只有当目标值不为null/undefined时才计算）
+            let calculatedTimeOffset = undefined;
+            if (tOffset !== undefined && tOffset !== null) {
+                calculatedTimeOffset = tOffset - startFrameTimeValue_current;
+            }
+            
+            let calculatedXOffset = undefined;
+            if (offset && offset.x !== null && offset.x !== undefined) {
+                calculatedXOffset = offset.x - startFrameX;
+            }
+            
+            let calculatedYOffset = undefined;
+            if (offset && offset.y !== null && offset.y !== undefined) {
+                calculatedYOffset = offset.y - startFrameY;
+            }
+            
+            let calculatedZOffset = undefined;
+            if (offset && offset.z !== null && offset.z !== undefined) {
+                calculatedZOffset = offset.z - startFrameZ;
+            }
+            
+            console.log(`[apply-offset] Target values: time=${tOffset !== undefined ? tOffset : 'none'}, x=${offset && offset.x !== undefined ? offset.x : 'none'}, y=${offset && offset.y !== undefined ? offset.y : 'none'}, z=${offset && offset.z !== undefined ? offset.z : 'none'}`);
+            console.log(`[apply-offset] Start frame (index ${actualStartFrame}) values: time=${startFrameTimeValue_current}, x=${startFrameX}, y=${startFrameY}, z=${startFrameZ}`);
+            console.log(`[apply-offset] Calculated offsets: time=${calculatedTimeOffset !== undefined ? calculatedTimeOffset : 'none'}, x=${calculatedXOffset !== undefined ? calculatedXOffset : 'none'}, y=${calculatedYOffset !== undefined ? calculatedYOffset : 'none'}, z=${calculatedZOffset !== undefined ? calculatedZOffset : 'none'}`);
+            
+            // 应用时间偏移到起始帧及之后的帧（只有当calculatedTimeOffset不为undefined时才应用）
+            if (calculatedTimeOffset !== undefined) {
+                const startFrameTimeBefore = startFrameTimeValue_current;
+                updatedFrames = updatedFrames.map((frame, index) => {
+                    const updatedFrame = JSON.parse(JSON.stringify(frame));
+                    // 只对起始帧及之后的帧应用时间偏移
+                    if (index >= actualStartFrame) {
+                        updatedFrame.frame_time = (updatedFrame.frame_time || 0) + calculatedTimeOffset;
+                    }
+                    return updatedFrame;
+                });
+                const startFrameTimeAfter = updatedFrames[actualStartFrame]?.frame_time;
+                console.log(`[apply-offset] Start frame (index ${actualStartFrame}) time: ${startFrameTimeBefore} -> ${startFrameTimeAfter}`);
+            }
+            
+            // 应用空间偏移量到起始帧及之后的帧（只有当calculatedOffset不为undefined时才应用）
+            if (calculatedXOffset !== undefined || calculatedYOffset !== undefined || calculatedZOffset !== undefined) {
+                updatedFrames = updatedFrames.map((frame, index) => {
+                    // 只对起始帧及之后的帧应用空间偏移
+                    if (index < actualStartFrame) {
+                        return frame;
+                    }
+                    
+                    // Ensure pos_world exists
+                    if (!frame.pos_world) {
+                        frame.pos_world = { x: 0, y: 0, z: 0 };
+                    }
+                    
+                    // Apply calculated offset to position (only if offset is defined)
+                    const originalX = frame.pos_world.x ?? 0;
+                    const originalY = frame.pos_world.y ?? 0;
+                    const originalZ = frame.pos_world.z ?? 0;
+                    
+                    if (calculatedXOffset !== undefined) {
+                        frame.pos_world.x = originalX + calculatedXOffset;
+                    }
+                    if (calculatedYOffset !== undefined) {
+                        frame.pos_world.y = originalY + calculatedYOffset;
+                    }
+                    if (calculatedZOffset !== undefined) {
+                        frame.pos_world.z = originalZ + calculatedZOffset;
+                    }
+                    
+                    return frame;
+                });
+            }
+        }
+        
+        // 保存文件
+        const dataToSave = { frames: updatedFrames };
+        fs.writeFileSync(absolutePath, JSON.stringify(dataToSave, null, 2), 'utf8');
+        
+        let message = '';
+        const appliedParts = [];
+        
+        if (scale !== 1.0) {
+            appliedParts.push(`time scale ${scale.toFixed(2)}x`);
+        }
+        
+        if (offset) {
+            const offsetParts = [];
+            if (offset.x !== null && offset.x !== undefined) offsetParts.push(`x=${offset.x.toFixed(4)}`);
+            if (offset.y !== null && offset.y !== undefined) offsetParts.push(`y=${offset.y.toFixed(4)}`);
+            if (offset.z !== null && offset.z !== undefined) offsetParts.push(`z=${offset.z.toFixed(4)}`);
+            if (offsetParts.length > 0) {
+                appliedParts.push(`offset (${offsetParts.join(', ')})`);
+            }
+        }
+        
+        if (tOffset !== undefined && tOffset !== null) {
+            appliedParts.push(`time offset ${tOffset >= 0 ? '+' : ''}${tOffset.toFixed(4)}s`);
+        }
+        
+        if (appliedParts.length > 0) {
+            message = `${appliedParts.join(', ')} applied successfully`;
+        } else {
+            message = 'No changes applied (all offsets are empty)';
+        }
+        
+        res.json({
+            success: true,
+            count: updatedFrames.length,
+            message: message
+        });
+        
+    } catch (error) {
+        console.error('Error applying offset:', error);
+        res.status(500).json({ 
+            error: error.message
+        });
+    }
+});
+
+/**
+ * 配置端点 - 返回前端需要的配置信息
+ */
+app.get('/api/config', (req, res) => {
+    res.json({
+        backendPort: PORT,
+        backendUrl: `http://localhost:${PORT}`
+    });
+});
+
+/**
+ * 健康检查端点
+ */
+app.get('/api/health', (req, res) => {
+    res.json({ status: 'ok' });
+});
+
+/**
+ * 启动服务器
+ */
+app.listen(PORT, () => {
+    console.log(`✓ Backend server running at http://localhost:${PORT}`);
+    console.log(`✓ File listing API: http://localhost:${PORT}/api/list-json-files?folder=./frames`);
+    console.log(`✓ Read frame file API: http://localhost:${PORT}/api/read-frame-file?file=./frames/frame_robot.json`);
+    console.log(`✓ Save frame file API: POST http://localhost:${PORT}/api/save-frame-file`);
+    console.log(`✓ Save CSV file API: POST http://localhost:${PORT}/api/save-csv-file`);
+});
