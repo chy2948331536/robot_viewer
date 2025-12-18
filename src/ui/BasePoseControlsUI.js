@@ -53,6 +53,9 @@ export class BasePoseControlsUI {
             z: { min: -0.3, max: 0.3 }
         };
         
+        // Ghost shadow (残影) management
+        this.ghostShadow = null;
+        
         // Inject styles once
         this.injectStyles();
         
@@ -113,6 +116,19 @@ export class BasePoseControlsUI {
                     if (model) {
                         this.goToNextFrame(model);
                     }
+                }
+            }
+            
+            // Check for Ctrl+Alt+R (toggle ghost shadow)
+            if (event.ctrlKey && event.altKey && (event.key === 'r' || event.key === 'R')) {
+                event.preventDefault();
+                if (model) {
+                    this.toggleGhostShadow(model);
+                } else {
+                    this.showNotification(
+                        window.i18n?.t('noModelLoaded') || 'No model loaded',
+                        'error'
+                    );
                 }
             }
         };
@@ -693,6 +709,11 @@ export class BasePoseControlsUI {
         }
 
         container.innerHTML = '';
+
+        // Clear ghost shadow if model is changing
+        if (this.currentModel !== model && this.ghostShadow) {
+            this.clearGhostShadow();
+        }
 
         if (!model || !model.threeObject) {
             const emptyState = document.createElement('div');
@@ -1349,8 +1370,64 @@ export class BasePoseControlsUI {
         interpolateSection.appendChild(interpolateBtn);
         container.appendChild(interpolateSection);
 
+        // Add keyboard shortcuts display box at the bottom
+        this.addKeyboardShortcutsBox(container);
+
         // Start dynamic range adjustment timer for xyz sliders
         this.startRangeAdjustment();
+    }
+
+    /**
+     * Add keyboard shortcuts display box at the bottom of the panel
+     * @param {HTMLElement} container - Container to append to
+     */
+    addKeyboardShortcutsBox(container) {
+        const shortcutsBox = document.createElement('div');
+        shortcutsBox.className = 'base-pose-shortcuts-box';
+        shortcutsBox.style.cssText = `
+            margin-top: 16px;
+            padding: 12px;
+            background: var(--panel-bg, #2a2a2a);
+            border: 1px solid var(--border-color, #444);
+            border-radius: 6px;
+            font-size: 12px;
+        `;
+
+        const shortcutsTitle = document.createElement('div');
+        shortcutsTitle.style.cssText = 'font-weight: 600; margin-bottom: 8px; color: var(--text-color, #fff);';
+        shortcutsTitle.textContent = window.i18n?.t('keyboardShortcuts') || '快捷键';
+        shortcutsBox.appendChild(shortcutsTitle);
+
+        const shortcutsList = document.createElement('div');
+        shortcutsList.style.cssText = 'display: flex; flex-direction: column; gap: 6px;';
+
+        // Define shortcuts
+        const shortcuts = [
+            { keys: 'Ctrl+Alt+S', desc: window.i18n?.t('shortcutSaveFrame') || '保存帧' },
+            { keys: 'Q', desc: window.i18n?.t('shortcutPrevFrame') || '上一帧' },
+            { keys: 'E', desc: window.i18n?.t('shortcutNextFrame') || '下一帧' },
+            { keys: 'Ctrl+Alt+R', desc: window.i18n?.t('shortcutToggleGhost') || '切换残影' }
+        ];
+
+        shortcuts.forEach(shortcut => {
+            const shortcutItem = document.createElement('div');
+            shortcutItem.style.cssText = 'display: flex; justify-content: space-between; align-items: center;';
+
+            const keysSpan = document.createElement('span');
+            keysSpan.style.cssText = 'font-family: monospace; background: var(--input-bg, #1a1a1a); padding: 2px 6px; border-radius: 3px; color: var(--accent, #4dabf7);';
+            keysSpan.textContent = shortcut.keys;
+
+            const descSpan = document.createElement('span');
+            descSpan.style.cssText = 'color: var(--text-color, #ccc); margin-left: 8px;';
+            descSpan.textContent = shortcut.desc;
+
+            shortcutItem.appendChild(keysSpan);
+            shortcutItem.appendChild(descSpan);
+            shortcutsList.appendChild(shortcutItem);
+        });
+
+        shortcutsBox.appendChild(shortcutsList);
+        container.appendChild(shortcutsBox);
     }
 
     /**
@@ -2663,6 +2740,138 @@ export class BasePoseControlsUI {
                 }
             }, 300);
         }, duration);
+    }
+
+    /**
+     * Toggle ghost shadow (残影) - create or clear
+     * @param {object} model - Robot model
+     */
+    toggleGhostShadow(model) {
+        if (this.ghostShadow) {
+            this.clearGhostShadow();
+        } else {
+            this.createGhostShadow(model);
+        }
+    }
+
+    /**
+     * Create a semi-transparent ghost shadow of the current frame
+     * @param {object} model - Robot model
+     */
+    createGhostShadow(model) {
+        if (!model || !model.threeObject) {
+            return;
+        }
+
+        // Clear existing ghost shadow if any
+        if (this.ghostShadow) {
+            this.clearGhostShadow();
+        }
+
+        // Clone the entire model - this preserves all joint angles
+        const clonedModel = model.threeObject.clone();
+        clonedModel.name = 'ghost-shadow';
+        
+        // Reset rotation to original orientation (remove base pose rotation)
+        if (this.originalBaseTransform) {
+            clonedModel.quaternion.copy(this.originalBaseTransform.quaternion);
+        } else {
+            // If no original transform saved, use identity quaternion
+            clonedModel.quaternion.set(0, 0, 0, 1);
+        }
+        
+        // Rotate around X axis by -90 degrees (-Math.PI/2)
+        const xRotation = new THREE.Euler(-Math.PI / 2, 0, 0, 'XYZ');
+        const xRotationQuat = new THREE.Quaternion().setFromEuler(xRotation);
+        clonedModel.quaternion.multiply(xRotationQuat);  // Apply x rotation first
+        
+        // Apply frame rotation offset (base pose rotation: roll, pitch, yaw)
+        const { roll, pitch, yaw, x, y, z } = this.basePose;
+        const frameRotation = new THREE.Euler(roll, pitch, yaw, 'XYZ');
+        const frameRotationQuat = new THREE.Quaternion().setFromEuler(frameRotation);
+        clonedModel.quaternion.multiply(frameRotationQuat);  // Then apply frame rotation
+        
+        // Apply position (x, y, z) from current base pose
+        clonedModel.position.set(x, y, z);
+        
+        // Make all materials semi-transparent
+        clonedModel.traverse((child) => {
+            if (child.isMesh && child.material) {
+                const materials = Array.isArray(child.material) ? child.material : [child.material];
+                materials.forEach((material) => {
+                    if (material) {
+                        // Clone material to avoid affecting original
+                        const clonedMaterial = material.clone();
+                        clonedMaterial.transparent = true;
+                        clonedMaterial.opacity = 0.3; // Semi-transparent
+                        clonedMaterial.depthWrite = false; // Allow proper transparency rendering
+                        clonedMaterial.needsUpdate = true;
+                        
+                        // Replace material
+                        if (Array.isArray(child.material)) {
+                            const index = materials.indexOf(material);
+                            child.material[index] = clonedMaterial;
+                        } else {
+                            child.material = clonedMaterial;
+                        }
+                    }
+                });
+            }
+        });
+
+        // Add to scene
+        this.sceneManager.scene.add(clonedModel);
+        this.ghostShadow = clonedModel;
+
+        // Redraw scene
+        this.sceneManager.updateEnvironment();
+        this.sceneManager.redraw();
+        this.sceneManager.render();
+
+        // Show notification
+        this.showNotification(
+            window.i18n?.t('ghostShadowCreated') || '残影已创建',
+            'success'
+        );
+    }
+
+    /**
+     * Clear ghost shadow
+     */
+    clearGhostShadow() {
+        if (this.ghostShadow) {
+            this.sceneManager.scene.remove(this.ghostShadow);
+            
+            // Dispose materials and geometries to free memory
+            this.ghostShadow.traverse((child) => {
+                if (child.isMesh) {
+                    if (child.geometry) {
+                        child.geometry.dispose();
+                    }
+                    if (child.material) {
+                        const materials = Array.isArray(child.material) ? child.material : [child.material];
+                        materials.forEach((material) => {
+                            if (material) {
+                                if (material.map) material.map.dispose();
+                                material.dispose();
+                            }
+                        });
+                    }
+                }
+            });
+            
+            this.ghostShadow = null;
+
+            // Redraw scene
+            this.sceneManager.redraw();
+            this.sceneManager.render();
+
+            // Show notification
+            this.showNotification(
+                window.i18n?.t('ghostShadowCleared') || '残影已清除',
+                'success'
+            );
+        }
     }
 
     /**
