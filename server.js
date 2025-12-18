@@ -629,6 +629,93 @@ app.post('/api/apply-offset', (req, res) => {
 });
 
 /**
+ * API 端点：应用统一帧间隔
+ * 使用: POST /api/apply-uniform-interval
+ * Body: { file: './frames/frame_robot.json', interval: 0.1 }
+ */
+app.post('/api/apply-uniform-interval', (req, res) => {
+    try {
+        const { file, interval } = req.body;
+        
+        if (!file) {
+            return res.status(400).json({ 
+                error: 'File path is required'
+            });
+        }
+
+        if (!interval || typeof interval !== 'number' || interval <= 0) {
+            return res.status(400).json({ 
+                error: 'Interval must be a positive number'
+            });
+        }
+
+        // 解析相对路径 - 相对于项目根目录
+        const absolutePath = path.resolve(__dirname, file);
+        
+        // 安全检查 - 确保路径在允许的目录中
+        const realPath = fs.realpathSync(path.dirname(absolutePath));
+        const baseDir = fs.realpathSync(__dirname);
+        
+        if (!realPath.startsWith(baseDir)) {
+            return res.status(403).json({ 
+                error: 'Access denied'
+            });
+        }
+
+        // 检查文件是否存在
+        if (!fs.existsSync(absolutePath)) {
+            return res.status(404).json({ 
+                error: 'File not found'
+            });
+        }
+
+        // 读取文件内容
+        const fileContent = fs.readFileSync(absolutePath, 'utf8');
+        const data = JSON.parse(fileContent);
+        
+        // 确保 frames 数组存在
+        if (!data.frames || !Array.isArray(data.frames)) {
+            return res.status(400).json({ 
+                error: 'Invalid file format: expected frames array'
+            });
+        }
+
+        if (data.frames.length === 0) {
+            return res.status(400).json({ 
+                error: 'No frames found in file'
+            });
+        }
+
+        // 按 frame_time 排序
+        data.frames.sort((a, b) => (a.frame_time || 0) - (b.frame_time || 0));
+
+        // 获取第一帧的时间作为起始时间
+        const startTime = data.frames[0].frame_time || 0;
+
+        // 重新分配帧时间，使用统一间隔
+        data.frames.forEach((frame, index) => {
+            frame.frame_time = startTime + (index * interval);
+        });
+
+        // 保存文件
+        fs.writeFileSync(absolutePath, JSON.stringify(data, null, 2), 'utf8');
+        
+        res.json({
+            success: true,
+            count: data.frames.length,
+            interval: interval,
+            message: `Uniform interval (${interval.toFixed(4)}s) applied to ${data.frames.length} frames`
+        });
+        
+    } catch (error) {
+        console.error('Error applying uniform interval:', error);
+        res.status(500).json({ 
+            error: error.message
+        });
+    }
+});
+
+/**
  * 配置端点 - 返回前端需要的配置信息
  */
 app.get('/api/config', (req, res) => {

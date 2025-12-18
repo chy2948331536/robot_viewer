@@ -1031,6 +1031,45 @@ export class BasePoseControlsUI {
             await this.applyOffsetToFile(model);
         });
         
+        // Uniform frame interval
+        const uniformIntervalGroup = document.createElement('div');
+        uniformIntervalGroup.style.cssText = 'display: flex; align-items: center; gap: 4px;';
+        const uniformIntervalLabel = document.createElement('label');
+        uniformIntervalLabel.style.cssText = 'font-size: 11px; color: var(--text-secondary); font-weight: 500; min-width: 60px;';
+        uniformIntervalLabel.textContent = window.i18n?.t('uniformInterval') || 'Interval:';
+        const uniformIntervalInput = document.createElement('input');
+        uniformIntervalInput.type = 'number';
+        uniformIntervalInput.className = 'base-pose-frame-input';
+        uniformIntervalInput.id = 'uniform-interval-input';
+        uniformIntervalInput.value = '';
+        uniformIntervalInput.step = '0.0001';
+        uniformIntervalInput.min = '0.0001';
+        uniformIntervalInput.style.cssText = 'width: 70px; padding: 4px 6px; text-align: center;';
+        uniformIntervalInput.placeholder = '0.1000';
+        const uniformIntervalUnit = document.createElement('span');
+        uniformIntervalUnit.style.cssText = 'font-size: 11px; color: var(--text-secondary);';
+        uniformIntervalUnit.textContent = 's';
+        const applyUniformIntervalBtn = document.createElement('button');
+        applyUniformIntervalBtn.id = 'apply-uniform-interval-btn';
+        applyUniformIntervalBtn.className = 'load-frame-btn';
+        applyUniformIntervalBtn.textContent = window.i18n?.t('applyUniformInterval') || 'Apply Interval';
+        applyUniformIntervalBtn.style.cssText = 'padding: 6px 12px; margin: 0; flex-shrink: 0; font-size: 11px;';
+        applyUniformIntervalBtn.addEventListener('click', async () => {
+            const interval = parseFloat(uniformIntervalInput.value);
+            if (isNaN(interval) || interval <= 0) {
+                this.showNotification(
+                    window.i18n?.t('invalidInterval') || 'Please enter a valid interval (must be > 0)',
+                    'error'
+                );
+                return;
+            }
+            await this.applyUniformInterval(model, interval);
+        });
+        uniformIntervalGroup.appendChild(uniformIntervalLabel);
+        uniformIntervalGroup.appendChild(uniformIntervalInput);
+        uniformIntervalGroup.appendChild(uniformIntervalUnit);
+        uniformIntervalGroup.appendChild(applyUniformIntervalBtn);
+        
         worldOffsetGroup.appendChild(xOffsetGroup);
         worldOffsetGroup.appendChild(yOffsetGroup);
         worldOffsetGroup.appendChild(zOffsetGroup);
@@ -1038,6 +1077,7 @@ export class BasePoseControlsUI {
         worldOffsetGroup.appendChild(timeOffsetGroup);
         worldOffsetGroup.appendChild(startFrameGroup);
         worldOffsetGroup.appendChild(applyOffsetBtn);
+        worldOffsetGroup.appendChild(uniformIntervalGroup);
         container.appendChild(worldOffsetGroup);
 
         // Add frame time input
@@ -2196,6 +2236,86 @@ export class BasePoseControlsUI {
     }
 
     /**
+     * Apply uniform frame interval to all frames
+     * @param {Object} model - The robot model
+     * @param {number} interval - The uniform interval in seconds
+     */
+    async applyUniformInterval(model, interval) {
+        if (!model) {
+            this.showNotification(window.i18n?.t('noModelLoaded') || 'No model loaded', 'error');
+            return;
+        }
+
+        // Validate file name
+        if (!this.frameFileName || this.frameFileName.trim() === '') {
+            this.showNotification(window.i18n?.t('frameFileNameRequired') || 'Please enter a frame file name', 'error');
+            return;
+        }
+
+        if (!interval || interval <= 0) {
+            this.showNotification(
+                window.i18n?.t('invalidInterval') || 'Interval must be greater than 0',
+                'error'
+            );
+            return;
+        }
+
+        const applyBtn = document.getElementById('apply-uniform-interval-btn');
+        if (applyBtn) {
+            applyBtn.disabled = true;
+            applyBtn.textContent = window.i18n?.t('applying') || 'Applying...';
+        }
+
+        try {
+            const filePath = this.getFrameFilePath(model);
+            
+            // Apply uniform interval via backend API
+            await backendConfig.init();
+            const applyResponse = await fetch(backendConfig.getApiUrl('api/apply-uniform-interval'), {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    file: filePath,
+                    interval: interval
+                })
+            });
+
+            if (!applyResponse.ok) {
+                const errorData = await applyResponse.json().catch(() => ({}));
+                throw new Error(errorData.error || `Failed to apply uniform interval: ${applyResponse.status}`);
+            }
+
+            const result = await applyResponse.json();
+            if (result.error) {
+                throw new Error(result.error);
+            }
+
+            // Reload frames after saving
+            await this.loadFrameFile(model);
+
+            // Show success notification
+            const message = result.message || 
+                (window.i18n?.t('uniformIntervalApplied') || 
+                `Uniform interval (${interval.toFixed(4)}s) applied to ${result.count || 0} frames`);
+            this.showNotification(message, 'success');
+
+        } catch (error) {
+            console.error('Error applying uniform interval:', error);
+            this.showNotification(
+                window.i18n?.t('applyUniformIntervalError') || `Error applying uniform interval: ${error.message}`,
+                'error'
+            );
+        } finally {
+            if (applyBtn) {
+                applyBtn.disabled = false;
+                applyBtn.textContent = window.i18n?.t('applyUniformInterval') || 'Apply Interval';
+            }
+        }
+    }
+
+    /**
      * Load frame file for current robot and cache all frames
      */
     async loadFrameFile(model) {
@@ -2479,6 +2599,13 @@ export class BasePoseControlsUI {
             }
             if (nextBtn) {
                 nextBtn.disabled = index >= this.framesData.length - 1;
+            }
+            
+            // Show notification with current time
+            if (frameData.frame_time !== undefined) {
+                const timeStr = frameData.frame_time.toFixed(4);
+                const timeMessage = (window.i18n?.t('currentFrameTime') || '当前时间: {time}s').replace('{time}', timeStr);
+                this.showNotification(timeMessage, 'success');
             }
         }
         
