@@ -2764,13 +2764,62 @@ export class BasePoseControlsUI {
         }
 
         // Clear existing ghost shadow if any
-        if (this.ghostShadow) {
-            this.clearGhostShadow();
-        }
+        // if (this.ghostShadow) {
+        //     this.clearGhostShadow();
+        // }
 
         // Clone the entire model - this preserves all joint angles
+        // Note: clone() is shallow copy, materials and geometries are shared
         const clonedModel = model.threeObject.clone();
         clonedModel.name = 'ghost-shadow';
+        
+        // Deep clone geometries and materials to avoid affecting original model
+        const clonedGeometries = new Map();
+        const clonedMaterials = new Map();
+        
+        clonedModel.traverse((child) => {
+            if (child.isMesh) {
+                // Deep clone geometry
+                if (child.geometry && !clonedGeometries.has(child.geometry)) {
+                    const clonedGeometry = child.geometry.clone();
+                    clonedGeometries.set(child.geometry, clonedGeometry);
+                    child.geometry = clonedGeometry;
+                } else if (child.geometry && clonedGeometries.has(child.geometry)) {
+                    child.geometry = clonedGeometries.get(child.geometry);
+                }
+                
+                // Deep clone materials
+                if (child.material) {
+                    const materials = Array.isArray(child.material) ? child.material : [child.material];
+                    const clonedMaterialsArray = materials.map((material) => {
+                        if (!material) return null;
+                        
+                        // Check if we already cloned this material
+                        if (clonedMaterials.has(material)) {
+                            return clonedMaterials.get(material);
+                        }
+                        
+                        // Clone material
+                        const clonedMaterial = material.clone();
+                        clonedMaterial.transparent = true;
+                        clonedMaterial.opacity = 0.3; // Semi-transparent
+                        clonedMaterial.depthWrite = false; // Allow proper transparency rendering
+                        clonedMaterial.needsUpdate = true;
+                        
+                        // Store cloned material
+                        clonedMaterials.set(material, clonedMaterial);
+                        return clonedMaterial;
+                    });
+                    
+                    // Replace material(s)
+                    if (Array.isArray(child.material)) {
+                        child.material = clonedMaterialsArray;
+                    } else {
+                        child.material = clonedMaterialsArray[0];
+                    }
+                }
+            }
+        });
         
         // Reset rotation to original orientation (remove base pose rotation)
         if (this.originalBaseTransform) {
@@ -2780,44 +2829,26 @@ export class BasePoseControlsUI {
             clonedModel.quaternion.set(0, 0, 0, 1);
         }
         
-        // Rotate around X axis by -90 degrees (-Math.PI/2)
+        // Get base pose values first
+        const { roll, pitch, yaw, x, y, z } = this.basePose;
+        
+        // Rotate the position vector around X axis by -90 degrees first
+        // because the ghost shadow will be rotated around X axis by -90 degrees
+        const positionVector = new THREE.Vector3(x, y, z);
         const xRotation = new THREE.Euler(-Math.PI / 2, 0, 0, 'XYZ');
         const xRotationQuat = new THREE.Quaternion().setFromEuler(xRotation);
+        positionVector.applyQuaternion(xRotationQuat);
+        
+        // Apply the rotated position
+        clonedModel.position.copy(positionVector);
+        
+        // Rotate around X axis by -90 degrees (-Math.PI/2)
         clonedModel.quaternion.multiply(xRotationQuat);  // Apply x rotation first
         
         // Apply frame rotation offset (base pose rotation: roll, pitch, yaw)
-        const { roll, pitch, yaw, x, y, z } = this.basePose;
         const frameRotation = new THREE.Euler(roll, pitch, yaw, 'XYZ');
         const frameRotationQuat = new THREE.Quaternion().setFromEuler(frameRotation);
         clonedModel.quaternion.multiply(frameRotationQuat);  // Then apply frame rotation
-        
-        // Apply position (x, y, z) from current base pose
-        clonedModel.position.set(x, y, z);
-        
-        // Make all materials semi-transparent
-        clonedModel.traverse((child) => {
-            if (child.isMesh && child.material) {
-                const materials = Array.isArray(child.material) ? child.material : [child.material];
-                materials.forEach((material) => {
-                    if (material) {
-                        // Clone material to avoid affecting original
-                        const clonedMaterial = material.clone();
-                        clonedMaterial.transparent = true;
-                        clonedMaterial.opacity = 0.3; // Semi-transparent
-                        clonedMaterial.depthWrite = false; // Allow proper transparency rendering
-                        clonedMaterial.needsUpdate = true;
-                        
-                        // Replace material
-                        if (Array.isArray(child.material)) {
-                            const index = materials.indexOf(material);
-                            child.material[index] = clonedMaterial;
-                        } else {
-                            child.material = clonedMaterial;
-                        }
-                    }
-                });
-            }
-        });
 
         // Add to scene
         this.sceneManager.scene.add(clonedModel);
