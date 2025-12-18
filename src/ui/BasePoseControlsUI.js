@@ -54,7 +54,7 @@ export class BasePoseControlsUI {
         };
         
         // Ghost shadow (残影) management
-        this.ghostShadow = null;
+        this.ghostShadows = []; // Array to store multiple ghost shadows
         
         // Inject styles once
         this.injectStyles();
@@ -119,17 +119,23 @@ export class BasePoseControlsUI {
                 }
             }
             
-            // Check for Ctrl+Alt+R (toggle ghost shadow)
+            // Check for Ctrl+Alt+R (create ghost shadow)
             if (event.ctrlKey && event.altKey && (event.key === 'r' || event.key === 'R')) {
                 event.preventDefault();
                 if (model) {
-                    this.toggleGhostShadow(model);
+                    this.createGhostShadow(model);
                 } else {
                     this.showNotification(
                         window.i18n?.t('noModelLoaded') || 'No model loaded',
                         'error'
                     );
                 }
+            }
+            
+            // Check for Ctrl+Alt+C (clear all ghost shadows)
+            if (event.ctrlKey && event.altKey && (event.key === 'c' || event.key === 'C')) {
+                event.preventDefault();
+                this.clearAllGhostShadows();
             }
         };
         
@@ -711,8 +717,8 @@ export class BasePoseControlsUI {
         container.innerHTML = '';
 
         // Clear ghost shadow if model is changing
-        if (this.currentModel !== model && this.ghostShadow) {
-            this.clearGhostShadow();
+        if (this.currentModel !== model && this.ghostShadows.length > 0) {
+            this.clearAllGhostShadows();
         }
 
         if (!model || !model.threeObject) {
@@ -1406,7 +1412,8 @@ export class BasePoseControlsUI {
             { keys: 'Ctrl+Alt+S', desc: window.i18n?.t('shortcutSaveFrame') || '保存帧' },
             { keys: 'Q', desc: window.i18n?.t('shortcutPrevFrame') || '上一帧' },
             { keys: 'E', desc: window.i18n?.t('shortcutNextFrame') || '下一帧' },
-            { keys: 'Ctrl+Alt+R', desc: window.i18n?.t('shortcutToggleGhost') || '切换残影' }
+            { keys: 'Ctrl+Alt+R', desc: window.i18n?.t('shortcutCreateGhost') || '创建残影' },
+            { keys: 'Ctrl+Alt+C', desc: window.i18n?.t('shortcutClearGhost') || '清除残影' }
         ];
 
         shortcuts.forEach(shortcut => {
@@ -2743,19 +2750,7 @@ export class BasePoseControlsUI {
     }
 
     /**
-     * Toggle ghost shadow (残影) - create or clear
-     * @param {object} model - Robot model
-     */
-    toggleGhostShadow(model) {
-        if (this.ghostShadow) {
-            this.clearGhostShadow();
-        } else {
-            this.createGhostShadow(model);
-        }
-    }
-
-    /**
-     * Create a semi-transparent ghost shadow of the current frame
+     * Create a new ghost shadow (残影) and add to the array
      * @param {object} model - Robot model
      */
     createGhostShadow(model) {
@@ -2852,7 +2847,9 @@ export class BasePoseControlsUI {
 
         // Add to scene
         this.sceneManager.scene.add(clonedModel);
-        this.ghostShadow = clonedModel;
+        // Add to scene
+        this.sceneManager.scene.add(clonedModel);
+        this.ghostShadows.push(clonedModel);
 
         // Redraw scene
         this.sceneManager.updateEnvironment();
@@ -2867,14 +2864,19 @@ export class BasePoseControlsUI {
     }
 
     /**
-     * Clear ghost shadow
+     * Clear all ghost shadows
      */
-    clearGhostShadow() {
-        if (this.ghostShadow) {
-            this.sceneManager.scene.remove(this.ghostShadow);
+    clearAllGhostShadows() {
+        if (this.ghostShadows.length === 0) {
+            return;
+        }
+
+        // Remove all ghost shadows from scene and dispose resources
+        this.ghostShadows.forEach((ghostShadow) => {
+            this.sceneManager.scene.remove(ghostShadow);
             
             // Dispose materials and geometries to free memory
-            this.ghostShadow.traverse((child) => {
+            ghostShadow.traverse((child) => {
                 if (child.isMesh) {
                     if (child.geometry) {
                         child.geometry.dispose();
@@ -2890,19 +2892,20 @@ export class BasePoseControlsUI {
                     }
                 }
             });
-            
-            this.ghostShadow = null;
+        });
+        
+        this.ghostShadows = [];
 
-            // Redraw scene
-            this.sceneManager.redraw();
-            this.sceneManager.render();
+        // Redraw scene
+        this.sceneManager.updateEnvironment();
+        this.sceneManager.redraw();
+        this.sceneManager.render();
 
-            // Show notification
-            this.showNotification(
-                window.i18n?.t('ghostShadowCleared') || '残影已清除',
-                'success'
-            );
-        }
+        // Show notification
+        this.showNotification(
+            window.i18n?.t('ghostShadowCleared') || '残影已清除',
+            'success'
+        );
     }
 
     /**
