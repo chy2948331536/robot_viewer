@@ -262,6 +262,12 @@ export class JointControlsUI {
                 slider.value = valueInRad;
                 ModelLoaderFactory.setJointAngle(model, joint.name, valueInRad);
                 joint.currentValue = valueInRad;
+                
+                // Sync bound joints (if joint binding is enabled)
+                if (window.app && window.app.basePoseControlsUI) {
+                    window.app.basePoseControlsUI.syncBoundJoints(model, joint.name, valueInRad);
+                }
+                
                 updateValueInput();
                 this.sceneManager.redraw();
                 this.sceneManager.render();
@@ -310,6 +316,12 @@ export class JointControlsUI {
                 slider.value = valueInRad;
                 ModelLoaderFactory.setJointAngle(model, joint.name, valueInRad);
                 joint.currentValue = valueInRad;
+                
+                // Sync bound joints (if joint binding is enabled)
+                if (window.app && window.app.basePoseControlsUI) {
+                    window.app.basePoseControlsUI.syncBoundJoints(model, joint.name, valueInRad);
+                }
+                
                 updateValueInput();
                 this.sceneManager.redraw();
                 this.sceneManager.render();
@@ -476,6 +488,11 @@ export class JointControlsUI {
             joint.currentValue = value;
             updateValueInput();
 
+            // Sync bound joints (if joint binding is enabled)
+            if (window.app && window.app.basePoseControlsUI) {
+                window.app.basePoseControlsUI.syncBoundJoints(model, joint.name, value);
+            }
+
             // Apply parallel mechanism constraints
             if (this.sceneManager.constraintManager) {
                 this.sceneManager.constraintManager.applyConstraints(model, joint);
@@ -516,6 +533,11 @@ export class JointControlsUI {
             slider.value = valueInRad;
             ModelLoaderFactory.setJointAngle(model, joint.name, valueInRad);
             joint.currentValue = valueInRad;
+
+            // Sync bound joints (if joint binding is enabled)
+            if (window.app && window.app.basePoseControlsUI) {
+                window.app.basePoseControlsUI.syncBoundJoints(model, joint.name, valueInRad);
+            }
 
             // Apply parallel mechanism constraints
             if (this.sceneManager.constraintManager) {

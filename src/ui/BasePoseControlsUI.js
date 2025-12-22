@@ -56,6 +56,13 @@ export class BasePoseControlsUI {
         // Ghost shadow (残影) management
         this.ghostShadows = []; // Array to store multiple ghost shadows
         
+        // Joint binding management (关节绑定)
+        // Each binding is an array of patterns, e.g., ['FR*', 'FL*'] means FR_hip_joint binds with FL_hip_joint
+        this.jointBindings = [
+            ['FR*', 'FL*'],  // Default: bind FR and FL joints
+            ['RR*', 'RL*']   // Default: bind RR and RL joints
+        ];
+        
         // Inject styles once
         this.injectStyles();
         
@@ -1376,6 +1383,9 @@ export class BasePoseControlsUI {
         interpolateSection.appendChild(interpolateBtn);
         container.appendChild(interpolateSection);
 
+        // Add joint binding management section
+        this.addJointBindingSection(container, model);
+
         // Add keyboard shortcuts display box at the bottom
         this.addKeyboardShortcutsBox(container);
 
@@ -1435,6 +1445,199 @@ export class BasePoseControlsUI {
 
         shortcutsBox.appendChild(shortcutsList);
         container.appendChild(shortcutsBox);
+    }
+
+    /**
+     * Add joint binding management section
+     * @param {HTMLElement} container - Container to append to
+     * @param {object} model - Robot model
+     */
+    addJointBindingSection(container, model) {
+        const bindingSection = document.createElement('div');
+        bindingSection.className = 'base-pose-frame-group';
+        bindingSection.style.cssText = 'margin-top: 16px; padding: 12px; display: flex; flex-direction: column; gap: 12px;';
+
+        const bindingTitle = document.createElement('div');
+        bindingTitle.style.cssText = 'font-weight: 600; font-size: 13px; color: var(--text-color, #fff); margin-bottom: 4px;';
+        bindingTitle.textContent = window.i18n?.t('jointBindings') || '关节绑定';
+        bindingSection.appendChild(bindingTitle);
+
+        const bindingsList = document.createElement('div');
+        bindingsList.id = 'joint-bindings-list';
+        bindingsList.style.cssText = 'display: flex; flex-direction: column; gap: 8px;';
+
+        // Render existing bindings
+        this.renderJointBindings(bindingsList, model);
+
+        bindingSection.appendChild(bindingsList);
+
+        // Add new binding button
+        const addBindingBtn = document.createElement('button');
+        addBindingBtn.className = 'load-frame-btn';
+        addBindingBtn.style.cssText = 'width: 100%; padding: 8px; margin-top: 4px; font-size: 12px;';
+        addBindingBtn.textContent = window.i18n?.t('addBinding') || '+ 添加绑定';
+        addBindingBtn.addEventListener('click', () => {
+            this.jointBindings.push(['', '']); // Add empty binding
+            this.renderJointBindings(bindingsList, model);
+        });
+        bindingSection.appendChild(addBindingBtn);
+
+        container.appendChild(bindingSection);
+    }
+
+    /**
+     * Render joint bindings list
+     * @param {HTMLElement} container - Container to render bindings in
+     * @param {object} model - Robot model
+     */
+    renderJointBindings(container, model) {
+        container.innerHTML = '';
+
+        this.jointBindings.forEach((binding, index) => {
+            const bindingItem = document.createElement('div');
+            bindingItem.style.cssText = 'display: flex; gap: 6px; align-items: center; padding: 6px; background: rgba(255, 255, 255, 0.03); border-radius: 4px;';
+
+            // Pattern inputs
+            binding.forEach((pattern, patternIndex) => {
+                const input = document.createElement('input');
+                input.type = 'text';
+                input.className = 'base-pose-frame-input';
+                input.value = pattern;
+                input.placeholder = '例如: FR*';
+                input.style.cssText = 'flex: 1; padding: 4px 8px; font-size: 11px;';
+                input.addEventListener('change', () => {
+                    this.jointBindings[index][patternIndex] = input.value.trim();
+                });
+                bindingItem.appendChild(input);
+
+                if (patternIndex < binding.length - 1) {
+                    const separator = document.createElement('span');
+                    separator.textContent = '↔';
+                    separator.style.cssText = 'color: var(--text-secondary, #999); font-size: 12px;';
+                    bindingItem.appendChild(separator);
+                }
+            });
+
+            // Delete button
+            const deleteBtn = document.createElement('button');
+            deleteBtn.textContent = '×';
+            deleteBtn.style.cssText = 'width: 24px; height: 24px; padding: 0; border: none; background: rgba(255, 59, 48, 0.2); color: #ff3b30; border-radius: 4px; cursor: pointer; font-size: 16px; line-height: 1;';
+            deleteBtn.addEventListener('click', () => {
+                this.jointBindings.splice(index, 1);
+                this.renderJointBindings(container, model);
+            });
+            bindingItem.appendChild(deleteBtn);
+
+            container.appendChild(bindingItem);
+        });
+    }
+
+    /**
+     * Match joint name against pattern (supports * wildcard)
+     * @param {string} jointName - Joint name to match
+     * @param {string} pattern - Pattern with * wildcard
+     * @returns {boolean} - True if matches
+     */
+    matchJointPattern(jointName, pattern) {
+        if (!pattern || pattern === '') return false;
+        // Convert pattern to regex: * matches any characters
+        const regexPattern = pattern.replace(/\*/g, '.*');
+        const regex = new RegExp(`^${regexPattern}$`);
+        return regex.test(jointName);
+    }
+
+    /**
+     * Find bound joints for a given joint name
+     * @param {string} jointName - Joint name to find bindings for
+     * @param {object} model - Robot model
+     * @returns {Array<string>} - Array of bound joint names
+     */
+    findBoundJoints(jointName, model) {
+        const boundJoints = [];
+
+        // Check each binding group
+        for (const binding of this.jointBindings) {
+            // Find which pattern in this binding matches the joint
+            let matchingPatternIndex = -1;
+            for (let i = 0; i < binding.length; i++) {
+                if (this.matchJointPattern(jointName, binding[i])) {
+                    matchingPatternIndex = i;
+                    break;
+                }
+            }
+
+            // If this joint matches a pattern, find all other joints matching other patterns in the same binding
+            if (matchingPatternIndex >= 0) {
+                const matchingPattern = binding[matchingPatternIndex];
+                
+                // Extract the suffix (part after prefix) from the matching joint
+                // e.g., FR_hip_joint with pattern FR* -> suffix is _hip_joint
+                const prefix = matchingPattern.replace(/\*/g, '');
+                const suffix = jointName.substring(prefix.length);
+
+                // Find all joints matching other patterns in this binding
+                for (let i = 0; i < binding.length; i++) {
+                    if (i === matchingPatternIndex) continue; // Skip the matching pattern itself
+                    
+                    const otherPattern = binding[i];
+                    const otherPrefix = otherPattern.replace(/\*/g, '');
+                    const otherJointName = otherPrefix + suffix;
+
+                    // Check if this joint exists in the model
+                    if (model && model.joints && model.joints.has(otherJointName)) {
+                        boundJoints.push(otherJointName);
+                    }
+                }
+            }
+        }
+
+        return boundJoints;
+    }
+
+    /**
+     * Sync bound joints when a joint angle is changed
+     * @param {object} model - Robot model
+     * @param {string} jointName - Joint name that was changed
+     * @param {number} angle - New angle value
+     * @param {boolean} skipSync - If true, skip syncing to prevent infinite loops
+     */
+    syncBoundJoints(model, jointName, angle, skipSync = false) {
+        if (skipSync) return; // Prevent infinite loops
+        
+        const boundJoints = this.findBoundJoints(jointName, model);
+        
+        boundJoints.forEach(boundJointName => {
+            const boundJoint = model.joints.get(boundJointName);
+            if (boundJoint) {
+                ModelLoaderFactory.setJointAngle(model, boundJointName, angle);
+                boundJoint.currentValue = angle;
+
+                // Update UI slider if exists (without triggering events to prevent loops)
+                const slider = document.querySelector(`.joint-slider[data-joint="${boundJointName}"]`);
+                if (slider) {
+                    // Temporarily disable event to prevent triggering sync again
+                    const originalValue = slider.value;
+                    slider.value = angle;
+                    
+                    // Update display
+                    const control = slider.closest('.joint-control');
+                    if (control && control._updateDisplay) {
+                        control._updateDisplay();
+                    }
+                    
+                    // Update value input if exists
+                    const valueInput = document.querySelector(`input[data-joint-input="${boundJointName}"]`);
+                    if (valueInput) {
+                        const angleUnit = document.querySelector('#unit-deg.active') ? 'deg' : 'rad';
+                        if (angleUnit === 'deg') {
+                            valueInput.value = (angle * 180 / Math.PI).toFixed(2);
+                        } else {
+                            valueInput.value = angle.toFixed(2);
+                        }
+                    }
+                }
+            }
+        });
     }
 
     /**

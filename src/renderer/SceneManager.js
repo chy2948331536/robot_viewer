@@ -617,6 +617,11 @@ export class SceneManager {
             ModelLoaderFactory.setJointAngle(model, joint.name, angle);
             joint.currentValue = angle;
 
+            // Sync bound joints (if joint binding is enabled)
+            if (window.app && window.app.basePoseControlsUI) {
+                window.app.basePoseControlsUI.syncBoundJoints(model, joint.name, angle);
+            }
+
             // Apply parallel mechanism constraints
             this.constraintManager.applyConstraints(model, joint);
 
