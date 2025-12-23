@@ -40,18 +40,32 @@ export class FileHandler {
             e.stopPropagation();
         };
 
+        // Check if the drag event contains files (not UI elements like sliders)
+        const hasFiles = (e) => {
+            if (!e.dataTransfer) return false;
+            // Check if dataTransfer contains files
+            const types = e.dataTransfer.types;
+            return types && (types.includes('Files') || types.includes('application/x-moz-file'));
+        };
+
         ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
             body.addEventListener(eventName, preventDefaults, false);
         });
 
         let dragCounter = 0;
         body.addEventListener('dragenter', (e) => {
+            // Only show drop zone if dragging files
+            if (!hasFiles(e)) return;
+            
             dragCounter++;
             const dropZone = document.getElementById('drop-zone');
             if (dropZone) dropZone.classList.add('drag-over');
         }, false);
 
         body.addEventListener('dragleave', (e) => {
+            // Only handle if we were tracking a file drag
+            if (!hasFiles(e)) return;
+            
             dragCounter--;
             if (dragCounter === 0) {
                 const dropZone = document.getElementById('drop-zone');
@@ -63,6 +77,10 @@ export class FileHandler {
             dragCounter = 0;
             const dropZone = document.getElementById('drop-zone');
             if (dropZone) dropZone.classList.remove('drag-over');
+            
+            // Only handle if dropping files
+            if (!hasFiles(e)) return;
+            
             this.handleDrop(e);
         }, false);
     }
