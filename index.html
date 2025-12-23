@@ -2720,6 +2720,82 @@
             letter-spacing: 0.5px;
         }
 
+        /* Robot selector dropdown - shares styles with up-select */
+        #robot-select {
+            padding: 5px 24px 5px 12px;
+            height: auto;
+            background-color: rgba(255, 255, 255, 0.08);
+            border: none;
+            border-radius: 12px;
+            color: var(--text-primary);
+            font-size: 11px;
+            cursor: pointer;
+            transition: background-color 0.2s, border-color 0.2s;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23aaaaaa' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 7px center;
+            min-width: 80px;
+            max-width: 150px;
+        }
+
+        #robot-select:hover {
+            background-color: rgba(255, 255, 255, 0.12);
+        }
+
+        #robot-select:focus {
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.12);
+            background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 5L5 1L1 5' stroke='%23aaaaaa' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+        }
+
+        [data-theme="dark"] #robot-select option {
+            background-color: #2a2a2a;
+            color: var(--text-primary);
+            padding: 8px 12px;
+        }
+
+        [data-theme="dark"] #robot-select option:hover {
+            background-color: rgba(10, 132, 255, 0.15);
+        }
+
+        [data-theme="dark"] #robot-select option:checked {
+            background: linear-gradient(135deg, var(--accent) 0%, rgba(10, 132, 255, 0.8) 100%);
+            color: white;
+        }
+
+        [data-theme="light"] #robot-select {
+            background-color: rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23666666' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+        }
+
+        [data-theme="light"] #robot-select:hover {
+            background-color: rgba(0, 0, 0, 0.08);
+            border-color: rgba(0, 0, 0, 0.15);
+        }
+
+        [data-theme="light"] #robot-select:focus {
+            background-color: rgba(0, 0, 0, 0.08);
+            border-color: var(--accent);
+            background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 5L5 1L1 5' stroke='%23666666' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+        }
+
+        [data-theme="light"] #robot-select option {
+            background-color: #ffffff;
+            color: var(--text-primary);
+            padding: 8px 12px;
+        }
+
+        [data-theme="light"] #robot-select option:hover {
+            background-color: rgba(0, 132, 255, 0.08);
+        }
+
+        [data-theme="light"] #robot-select option:checked {
+            background: linear-gradient(135deg, var(--accent) 0%, rgba(10, 132, 255, 0.8) 100%);
+            color: white;
+        }
+
         #up-select {
             padding: 5px 24px 5px 12px;
             height: auto;
@@ -3163,6 +3239,14 @@
                     <button class="control-button active" id="toggle-lighting" data-checked="true">
                         <span data-i18n="lighting"></span>
                     </button>
+                </div>
+
+                <div class="control-bar-divider"></div>
+
+                <div class="control-bar-section">
+                    <select id="robot-select" class="control-bar-select">
+                        <option value="" data-i18n="selectRobot">选择机器人</option>
+                    </select>
                 </div>
 
                 <div class="control-bar-divider"></div>

@@ -716,6 +716,134 @@ app.post('/api/apply-uniform-interval', (req, res) => {
 });
 
 /**
+ * API 端点：列出 robot_description 目录下的机器人文件夹
+ * 使用: GET /api/list-robot-folders
+ * 返回: { folders: ['f3', 'go1', ...] }
+ */
+app.get('/api/list-robot-folders', (req, res) => {
+    try {
+        const robotDescPath = path.resolve(__dirname, 'robot_description');
+        
+        // 检查目录是否存在
+        if (!fs.existsSync(robotDescPath) || !fs.statSync(robotDescPath).isDirectory()) {
+            return res.status(404).json({ 
+                error: 'robot_description folder not found',
+                folders: []
+            });
+        }
+        
+        // 列出所有子目录
+        const entries = fs.readdirSync(robotDescPath, { withFileTypes: true });
+        const folders = entries
+            .filter(entry => entry.isDirectory())
+            .map(entry => entry.name)
+            .sort();
+        
+        res.json({
+            count: folders.length,
+            folders: folders
+        });
+        
+    } catch (error) {
+        console.error('Error listing robot folders:', error);
+        res.status(500).json({ 
+            error: error.message,
+            folders: []
+        });
+    }
+});
+
+/**
+ * API 端点：读取指定机器人文件夹的文件内容
+ * 使用: GET /api/read-robot-folder?folder=f3
+ * 返回: 文件夹中所有文件的内容（递归）
+ */
+app.get('/api/read-robot-folder', (req, res) => {
+    try {
+        const folderName = req.query.folder;
+        
+        if (!folderName) {
+            return res.status(400).json({ 
+                error: 'Folder name is required'
+            });
+        }
+        
+        const robotDescPath = path.resolve(__dirname, 'robot_description');
+        const folderPath = path.join(robotDescPath, folderName);
+        
+        // 安全检查 - 确保路径在 robot_description 目录中
+        const realPath = fs.realpathSync(folderPath);
+        const basePath = fs.realpathSync(robotDescPath);
+        
+        if (!realPath.startsWith(basePath)) {
+            return res.status(403).json({ 
+                error: 'Access denied'
+            });
+        }
+        
+        // 检查目录是否存在
+        if (!fs.existsSync(realPath) || !fs.statSync(realPath).isDirectory()) {
+            return res.status(404).json({ 
+                error: 'Folder not found'
+            });
+        }
+        
+        // 递归读取所有文件
+        const files = {};
+        
+        function readFilesRecursively(dirPath, relativePath = '') {
+            const entries = fs.readdirSync(dirPath, { withFileTypes: true });
+            
+            for (const entry of entries) {
+                const fullPath = path.join(dirPath, entry.name);
+                const relativeFilePath = relativePath ? `${relativePath}/${entry.name}` : entry.name;
+                
+                if (entry.isDirectory()) {
+                    readFilesRecursively(fullPath, relativeFilePath);
+                } else if (entry.isFile()) {
+                    // 读取文件内容
+                    const ext = path.extname(entry.name).toLowerCase();
+                    
+                    // 对于二进制文件（如 mesh 文件），返回 base64 编码
+                    const binaryExtensions = ['.stl', '.dae', '.obj', '.mtl', '.png', '.jpg', '.jpeg', '.gif', '.bmp'];
+                    
+                    if (binaryExtensions.includes(ext)) {
+                        const content = fs.readFileSync(fullPath);
+                        files[relativeFilePath] = {
+                            type: 'binary',
+                            content: content.toString('base64'),
+                            size: content.length
+                        };
+                    } else {
+                        // 文本文件直接读取
+                        const content = fs.readFileSync(fullPath, 'utf8');
+                        files[relativeFilePath] = {
+                            type: 'text',
+                            content: content,
+                            size: content.length
+                        };
+                    }
+                }
+            }
+        }
+        
+        readFilesRecursively(realPath);
+        
+        res.json({
+            folder: folderName,
+            fileCount: Object.keys(files).length,
+            files: files
+        });
+        
+    } catch (error) {
+        console.error('Error reading robot folder:', error);
+        res.status(500).json({ 
+            error: error.message
+        });
+    }
+});
+
+/**
  * 配置端点 - 返回前端需要的配置信息
  */
 app.get('/api/config', (req, res) => {

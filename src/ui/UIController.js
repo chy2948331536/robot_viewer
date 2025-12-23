@@ -633,6 +633,7 @@ export class UIController {
         this.onResetJoints = callbacks.onResetJoints;
         this.onMujocoReset = callbacks.onMujocoReset;
         this.onMujocoToggleSimulate = callbacks.onMujocoToggleSimulate;
+        this.onRobotSelected = callbacks.onRobotSelected;
 
         this.setupControlPanel();
         this.setupThemeToggle(callbacks.onThemeChanged);
@@ -643,6 +644,177 @@ export class UIController {
         this.setupShadowToggle();
         this.setupFixedGroundToggle();
         this.setupLightingToggle();
+        this.setupRobotSelector();
+    }
+
+    /**
+     * Setup robot selector dropdown
+     */
+    async setupRobotSelector() {
+        const robotSelect = document.getElementById('robot-select');
+        if (!robotSelect) {
+            return;
+        }
+
+        // Load robot folders from backend
+        await this.loadRobotFolders();
+
+        // Handle robot selection
+        robotSelect.addEventListener('change', async (e) => {
+            const folderName = e.target.value;
+            if (!folderName) return;
+
+            try {
+                await this.loadRobotFolder(folderName);
+            } catch (error) {
+                console.error('Failed to load robot folder:', error);
+            }
+        });
+    }
+
+    /**
+     * Load robot folders from backend
+     */
+    async loadRobotFolders() {
+        const robotSelect = document.getElementById('robot-select');
+        if (!robotSelect) return;
+
+        try {
+            // Get backend URL
+            const backendConfig = await import('../utils/BackendConfig.js');
+            const backendUrl = backendConfig.default.getBackendUrl();
+
+            const response = await fetch(`${backendUrl}/api/list-robot-folders`);
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}`);
+            }
+
+            const data = await response.json();
+
+            // Clear existing options except the first one
+            while (robotSelect.options.length > 1) {
+                robotSelect.remove(1);
+            }
+
+            // Add folder options
+            if (data.folders && data.folders.length > 0) {
+                data.folders.forEach(folder => {
+                    const option = document.createElement('option');
+                    option.value = folder;
+                    option.textContent = folder;
+                    robotSelect.appendChild(option);
+                });
+            } else {
+                // No folders found
+                const option = document.createElement('option');
+                option.value = '';
+                option.textContent = window.i18n.t('noRobots');
+                option.disabled = true;
+                robotSelect.appendChild(option);
+            }
+        } catch (error) {
+            console.error('Failed to load robot folders:', error);
+        }
+    }
+
+    /**
+     * Load robot folder and simulate drag-drop
+     */
+    async loadRobotFolder(folderName) {
+        const robotSelect = document.getElementById('robot-select');
+
+        try {
+            // Get backend URL
+            const backendConfig = await import('../utils/BackendConfig.js');
+            const backendUrl = backendConfig.default.getBackendUrl();
+
+            // Fetch folder contents
+            const response = await fetch(`${backendUrl}/api/read-robot-folder?folder=${encodeURIComponent(folderName)}`);
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}`);
+            }
+
+            const data = await response.json();
+
+            if (!data.files || Object.keys(data.files).length === 0) {
+                console.error('No files found in robot folder');
+                return;
+            }
+
+            // Create File objects from the response
+            const fileHandler = window.app?.fileHandler;
+            if (!fileHandler) {
+                console.error('FileHandler not found');
+                return;
+            }
+
+            // Clear existing file map
+            fileHandler.fileMap.clear();
+
+            // Process files and add to fileMap
+            const files = [];
+            for (const [relativePath, fileData] of Object.entries(data.files)) {
+                let blob;
+                if (fileData.type === 'binary') {
+                    // Decode base64 for binary files
+                    const binaryData = atob(fileData.content);
+                    const bytes = new Uint8Array(binaryData.length);
+                    for (let i = 0; i < binaryData.length; i++) {
+                        bytes[i] = binaryData.charCodeAt(i);
+                    }
+                    blob = new Blob([bytes]);
+                } else {
+                    // Text files
+                    blob = new Blob([fileData.content], { type: 'text/plain' });
+                }
+
+                // Create File object with full path
+                const fileName = relativePath.split('/').pop();
+                const file = new File([blob], fileName, { type: blob.type });
+
+                // Store with multiple path variations for lookup
+                // This handles various ways the URDF might reference mesh files
+                const fullPath = `/${folderName}/${relativePath}`;
+                fileHandler.fileMap.set(fullPath, file);
+                fileHandler.fileMap.set(relativePath, file);
+                fileHandler.fileMap.set(fileName, file);
+
+                // Also store with leading slash variations
+                fileHandler.fileMap.set(`/${relativePath}`, file);
+                fileHandler.fileMap.set(`/${fileName}`, file);
+
+                // Handle relative paths like ../meshes/trunk.dae from urdf folder
+                // Store just the meshes/filename path
+                if (relativePath.includes('/')) {
+                    const parts = relativePath.split('/');
+                    // e.g., meshes/trunk.dae
+                    fileHandler.fileMap.set(parts.slice(-2).join('/'), file);
+                    // e.g., ../meshes/trunk.dae (relative from urdf folder)
+                    fileHandler.fileMap.set(`../${parts.slice(-2).join('/')}`, file);
+                }
+
+                files.push(file);
+            }
+
+            // Find loadable files
+            const loadableFiles = await fileHandler.findAllLoadableFiles(files);
+
+            if (loadableFiles.length > 0) {
+                fileHandler.availableModels = loadableFiles;
+                fileHandler.onFilesLoaded?.(loadableFiles);
+
+                // Load the first model
+                await fileHandler.loadFileOrMesh(loadableFiles[0]);
+
+                console.log(`Robot folder "${folderName}" loaded successfully`);
+            } else {
+                console.error('No loadable model files found in robot folder');
+            }
+
+        } catch (error) {
+            console.error('Error loading robot folder:', error);
+            throw error;
+        }
     }
 
     /**

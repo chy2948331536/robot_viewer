@@ -24,6 +24,11 @@ export const translations = {
         'help': '帮助',
         'theme': '主题',
         'language': '语言',
+        'selectRobot': '选择机器人',
+        'loadingRobots': '加载中...',
+        'noRobots': '无可用机器人',
+        'loadRobotFailed': '加载机器人失败',
+        'loadRobotSuccess': '机器人加载成功',
 
         // 面板标题
         'fileList': '文件',
@@ -200,6 +205,11 @@ export const translations = {
         'help': 'Help',
         'theme': 'Theme',
         'language': 'Language',
+        'selectRobot': 'Select Robot',
+        'loadingRobots': 'Loading...',
+        'noRobots': 'No robots available',
+        'loadRobotFailed': 'Failed to load robot',
+        'loadRobotSuccess': 'Robot loaded successfully',
 
         // Panel titles
         'fileList': 'Files',
